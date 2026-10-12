@@ -18,7 +18,13 @@ ruido, son frontera de decisión real. Esto es lo que hay que discutir en la tes
 
 | prob. phishing | URL | por qué evade |
 |---:|---|---|
-| 0.44 | `ocazrv.xyz` | phishing *apex* minimalista: corto, TLD barato, **sin palabras-gancho** ni subdominios ni dígitos. Cuando el atacante no usa señuelos léxicos, el detector basado en cadena se queda sin señal. |
+| 0.40 | `ocazrv.xyz` | phishing *apex* minimalista: corto, TLD barato, **sin palabras-gancho** ni subdominios ni dígitos. La marca ("oca") está incrustada pero con ruido ("zrv"), así que `dist_marca_min=3` y no dispara `typosquat` (≤2). Es el **piso estructural** del detector solo-URL: sin señuelos léxicos, casi no hay señal en la cadena. |
+
+> Nota: se agregaron features anti-evasión (`dist_marca_min`, `typosquat`,
+> `ratio_consonantes`, `max_run_consonantes`). Suman señal general pero **no
+> rescatan** este caso — confirma que necesita señales externas (edad del dominio,
+> certificado, reputación), no más features léxicas. Con solo 20 phishing, insistir
+> con features sería *overfitting*.
 
 ## Conclusiones para la tesis
 

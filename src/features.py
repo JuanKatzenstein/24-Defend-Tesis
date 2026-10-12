@@ -64,6 +64,52 @@ MARCAS = {
 
 _IPV4 = re.compile(r"^(?:\d{1,3}\.){3}\d{1,3}$")
 _HEX_RUN = re.compile(r"[0-9a-f]{8,}")
+_VOCALES = set("aeiou")
+
+
+def _levenshtein(a: str, b: str) -> int:
+    """Distancia de edición (sin dependencias). Para typosquatting marca<->label."""
+    if a == b:
+        return 0
+    if not a:
+        return len(b)
+    if not b:
+        return len(a)
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def _dist_marca_min(labels: list[str]) -> int:
+    """Mínima distancia de edición entre cualquier etiqueta del host y cualquier marca.
+    0 = marca exacta presente; 1-2 = posible typosquat; alto = sin relación."""
+    if not labels:
+        return 99
+    mejor = 99
+    for lab in labels:
+        for m in MARCAS:
+            # solo comparar con etiquetas de largo parecido (evita ruido)
+            if abs(len(lab) - len(m)) <= 3:
+                mejor = min(mejor, _levenshtein(lab, m))
+                if mejor == 0:
+                    return 0
+    return mejor
+
+
+def _max_run_consonantes(s: str) -> int:
+    """Corrida máxima de consonantes seguidas (señal de dominio aleatorio/gibberish)."""
+    run = mejor = 0
+    for c in s:
+        if c.isalpha() and c not in _VOCALES:
+            run += 1
+            mejor = max(mejor, run)
+        else:
+            run = 0
+    return mejor
 
 
 def _shannon_entropy(s: str) -> float:
@@ -112,6 +158,12 @@ def extract_features(url: str) -> dict:
     is_ip = 1 if _IPV4.match(host or "") else 0
     plataforma = next((p for p in PLATAFORMAS_HOSTING if host.endswith(p)), "")
 
+    # Señales anti-evasión (typosquatting y "gibberish")
+    dist_marca = _dist_marca_min(labels)
+    letras_sld = [c for c in sld if c.isalpha()]
+    n_vocales = sum(1 for c in letras_sld if c in _VOCALES)
+    ratio_consonantes = round(1 - n_vocales / len(letras_sld), 4) if letras_sld else 0.0
+
     feats = {
         "url_len": len(url),
         "host_len": len(host),
@@ -141,6 +193,10 @@ def extract_features(url: str) -> dict:
         "tiene_gancho": 1 if n_gancho > 0 else 0,
         "hex_largo": 1 if _HEX_RUN.search(host.replace(".", "")) else 0,
         "https": 1 if parsed.scheme == "https" else 0,
+        "dist_marca_min": dist_marca,
+        "typosquat": 1 if 0 < dist_marca <= 2 else 0,
+        "ratio_consonantes": ratio_consonantes,
+        "max_run_consonantes": _max_run_consonantes(sld),
     }
     return feats
 

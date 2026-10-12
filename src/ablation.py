@@ -31,6 +31,7 @@ SENALES_PHISHING = [
     "tld_sospechoso", "en_plataforma_hosting", "brand_suplantada",
     "n_palabras_gancho", "tiene_gancho", "host_entropy", "sld_entropy",
     "n_subdomains", "n_digits", "digit_ratio", "is_ip", "hex_largo", "n_hyphens",
+    "dist_marca_min", "typosquat", "ratio_consonantes", "max_run_consonantes",
 ]
 LARGOS = ["url_len", "host_len", "sld_len", "path_len", "query_len"]
 

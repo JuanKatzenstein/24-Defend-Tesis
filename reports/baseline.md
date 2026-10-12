@@ -1,6 +1,6 @@
 # Baseline — Detector de phishing en URLs
 
-- Dataset: 80 URLs (20 phishing / 60 legit) · 26 features numéricas + TLD (one-hot)
+- Dataset: 111 URLs (20 phishing / 91 legit) · 26 features numéricas + TLD (one-hot)
 - Split: 70% train / 30% test (estratificado, seed 42)
 - CV: 5-fold estratificado sobre el train
 
@@ -8,43 +8,43 @@
 
 ### Regresión Logística
 
-- CV F1 (train, 5-fold): 0.831 ± 0.183
-- Test — accuracy 0.958 · precision 1.000 · recall 0.833 · F1 0.909 · ROC-AUC 1.000
+- CV F1 (train, 5-fold): 0.725 ± 0.129
+- Test — accuracy 0.941 · precision 0.833 · recall 0.833 · F1 0.833 · ROC-AUC 0.994
 
 Matriz de confusión (test) — filas=real, cols=pred [legit, phishing]:
 ```
             pred_legit  pred_phish
-real_legit          18           0
+real_legit          27           1
 real_phish           1           5
 ```
 
 ### Random Forest
 
-- CV F1 (train, 5-fold): 0.871 ± 0.194
-- Test — accuracy 1.000 · precision 1.000 · recall 1.000 · F1 1.000 · ROC-AUC 1.000
+- CV F1 (train, 5-fold): 0.791 ± 0.163
+- Test — accuracy 0.971 · precision 1.000 · recall 0.833 · F1 0.909 · ROC-AUC 0.988
 
 Matriz de confusión (test) — filas=real, cols=pred [legit, phishing]:
 ```
             pred_legit  pred_phish
-real_legit          18           0
-real_phish           0           6
+real_legit          28           0
+real_phish           1           5
 ```
 
 ### Importancia de features (Random Forest, top 15)
 
-- sld_entropy: 0.1668
-- host_len: 0.1096
-- host_entropy: 0.0961
-- sld_len: 0.0906
-- path_len: 0.0885
-- url_len: 0.0738
-- tld_uy: 0.0722
-- n_slash: 0.0456
-- n_subdomains: 0.0364
-- n_dots: 0.0357
-- en_plataforma_hosting: 0.0286
-- n_digits: 0.0279
-- n_hyphens: 0.0242
-- digit_ratio: 0.0183
-- tld_com: 0.0155
+- sld_entropy: 0.1582
+- host_entropy: 0.1162
+- sld_len: 0.1119
+- path_len: 0.0994
+- host_len: 0.0840
+- n_slash: 0.0742
+- tld_uy: 0.0507
+- url_len: 0.0425
+- en_plataforma_hosting: 0.0344
+- n_dots: 0.0281
+- digit_ratio: 0.0275
+- n_digits: 0.0266
+- n_subdomains: 0.0236
+- letter_ratio: 0.0225
+- tld_co: 0.0168
 

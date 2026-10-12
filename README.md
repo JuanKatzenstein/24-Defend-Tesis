@@ -27,7 +27,14 @@ python3 build_dataset.py --phishing ../data/raw/corpus_sintetico.csv \
                          --benign   ../data/raw/benign_seed.csv \
                          --out      ../data/processed/dataset.csv
 python3 train_baseline.py --data ../data/processed/dataset.csv --report ../reports/baseline.md
+python3 ablation.py       --data ../data/processed/dataset.csv --report ../reports/ablacion.md
 ```
+
+### Reportes
+
+- `reports/baseline.md` — métricas del baseline (LogReg + Random Forest).
+- `reports/ablacion.md` — ablación de features (señal real vs. fuga por TLD/largos).
+- `reports/analisis_errores.md` — errores del detector en validación cruzada.
 
 ## Notas metodológicas (importantes para defender la tesis)
 
@@ -37,6 +44,13 @@ python3 train_baseline.py --data ../data/processed/dataset.csv --report ../repor
    apoyándose en atajos como el TLD (`.uy` ≈ legítimo): es **fuga de
    información**, no capacidad de detección. Sirve para validar que el pipeline
    funciona de punta a punta, nada más.
+
+   - **Mitigación aplicada:** la clase negativa incluye *hard negatives* — URLs
+     legítimas reales que parecen sospechosas (logins como
+     `login.microsoftonline.com`, sitios en `vercel.app`/`github.io`, empresas en
+     `.xyz`/`.io`, URLs largas con query/hash, acortadores). Con eso el AUC perfecto
+     del baseline inicial bajó a ~0.96–0.99 y aparecieron errores estructurales
+     reales (ver `reports/analisis_errores.md`).
 
 2. **Para números defendibles, usar datos reales:**
    - Positivos (phishing): PhishTank, OpenPhish, APWG, datasets de Mendeley/UCI.

@@ -12,10 +12,15 @@ data/raw/         corpus de entrada (phishing) y clase legítima (semilla)
 data/processed/   dataset etiquetado + features
 reports/          reportes de evaluación
 src/
-  features.py        extracción de features léxicas de URL/host (28 features)
-  make_benign.py     construye la clase negativa (URLs legítimas reales)
+  features.py        extracción de features léxicas de URL/host (32 features)
+  make_benign.py     construye la clase negativa (legítimas + hard negatives)
   build_dataset.py   une phishing + legítimas y extrae features
   train_baseline.py  baseline interpretable (LogReg + Random Forest)
+  ablation.py        ablación de features (señal real vs. fuga)
+  ingest_real.py     ingesta de feeds reales (OpenPhish/PhishTank + Tranco)
+tools/
+  plan_lote.py       Fase 2: muestreo estadístico de parámetros del corpus
+  validar_lote.py    Fase 3: valida el plan (proporciones + no-repetición)
 ```
 
 ## Cómo correr
@@ -62,6 +67,15 @@ python3 ablation.py       --data ../data/processed/dataset.csv --report ../repor
    artefactos del armado del dataset (p. ej. TLD, longitud sistemáticamente
    distinta). Conviene reportar también una evaluación con features "neutralizadas"
    y/o un split temporal.
+
+## Hallazgos del validador (Fase 3)
+
+Al validar un lote generado por `plan_lote.py`, la Fase 3 detectó que las
+combinaciones `(marca, gramática)` pueden repetirse para gramáticas que *fuerzan*
+la marca (p. ej. `S1b`→`sucive`, `S3`→`brou`): el control de no-repetición en
+`armar_lote()` se hace sobre la marca sorteada, pero `fila()` la reescribe después,
+así que el dedup no cubre esos casos. Es justamente lo que un validador debe cazar.
+Queda documentado como defecto conocido del generador (no se modificó la Fase 2).
 
 ## Alcance
 

@@ -122,10 +122,13 @@ def main():
                   f"{int(args.test_size*100)}% test (estratificado, seed {args.seed})")
     lineas.append(f"- CV: {k}-fold estratificado sobre el train")
     lineas.append("")
-    lineas.append("> **Nota metodológica:** dataset chico y en parte sintético → "
-                  "métricas optimistas. Validan el pipeline, no son resultado final. "
-                  "Ampliar con feeds reales (PhishTank/OpenPhish) y ranking legítimo "
-                  "(Tranco) para los números definitivos.")
+    lineas.append("> **Nota metodológica:** revisar siempre las *importancias* de features "
+                  "para descartar fugas por el armado del dataset (p. ej. formato de la "
+                  "clase negativa). Si la clase legítima son dominios pelados (Tranco), "
+                  "evaluar a nivel dominio (`--host-only`) para evitar que `path_len`/"
+                  "`n_slash` separen por formato en vez de por phishing. Contrastar con "
+                  "`ablation.py`: si el rendimiento no cae al quitar largos/TLD, la señal "
+                  "es real.")
     lineas.append("")
 
     logreg = LogisticRegression(max_iter=1000, class_weight="balanced")

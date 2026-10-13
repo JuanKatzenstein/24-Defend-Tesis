@@ -15,10 +15,20 @@ Uso:
 from __future__ import annotations
 
 import argparse
+from urllib.parse import urlparse
 
 import pandas as pd
 
 from features import extract_frame
+
+
+def a_dominio(url: str) -> str:
+    """Reduce una URL a 'scheme://host' (descarta path/query).
+    Para evaluación a nivel dominio, cuando la clase negativa (p. ej. Tranco) son
+    dominios pelados y comparar URLs completas introduciría un artefacto de formato."""
+    u = url if "://" in str(url) else "http://" + str(url)
+    p = urlparse(u)
+    return f"{p.scheme}://{p.hostname or ''}"
 
 
 def main():
@@ -26,6 +36,8 @@ def main():
     ap.add_argument("--phishing", required=True, help="CSV con URLs de phishing")
     ap.add_argument("--benign", required=True, help="CSV con URLs legítimas")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--host-only", action="store_true",
+                    help="reduce ambas clases a scheme://host (evaluación a nivel dominio)")
     args = ap.parse_args()
 
     ph = pd.read_csv(args.phishing)
@@ -34,6 +46,9 @@ def main():
     be = be[["url"]].copy(); be["label"] = 0
 
     df = pd.concat([ph, be], ignore_index=True)
+    if args.host_only:
+        df["url"] = df["url"].map(a_dominio)
+        df = df.drop_duplicates(subset="url").reset_index(drop=True)
     feats = extract_frame(df, "url")
     out = pd.concat([df[["url", "label"]], feats], axis=1)
     out.to_csv(args.out, index=False)

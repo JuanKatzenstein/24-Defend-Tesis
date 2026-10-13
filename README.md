@@ -35,11 +35,33 @@ python3 train_baseline.py --data ../data/processed/dataset.csv --report ../repor
 python3 ablation.py       --data ../data/processed/dataset.csv --report ../reports/ablacion.md
 ```
 
+### Datos reales (resultado principal)
+
+```bash
+cd src
+# descarga feeds reales (requiere red saliente a openphish.com y tranco-list.eu)
+python3 ingest_real.py --phishing-url https://openphish.com/feed.txt \
+                       --tranco-url https://tranco-list.eu/top-1m.csv.zip \
+                       --n-benign 2000 --outdir ../data/raw
+# evaluación a nivel DOMINIO (evita el artefacto de formato de Tranco sin paths)
+python3 build_dataset.py --phishing ../data/raw/phishing_real.csv \
+                         --benign ../data/raw/benign_real.csv \
+                         --out ../data/processed/dataset_real_host.csv --host-only
+python3 train_baseline.py --data ../data/processed/dataset_real_host.csv --report ../reports/baseline_real_host.md
+python3 ablation.py       --data ../data/processed/dataset_real_host.csv --report ../reports/ablacion_real_host.md
+python3 curvas_eval.py    --data ../data/processed/dataset_real_host.csv --outdir ../reports/real
+```
+
+Resultado: **ROC-AUC ~0.97, F1 ~0.90** (OpenPhish vs Tranco), robusto a la ablación.
+Ver **`reports/RESULTADOS.md`** para el resumen completo.
+
 ### Reportes
 
-- `reports/baseline.md` — métricas del baseline (LogReg + Random Forest).
-- `reports/ablacion.md` — ablación de features (señal real vs. fuga por TLD/largos).
+- `reports/RESULTADOS.md` — **resumen principal** (sintético + datos reales).
+- `reports/baseline*.md` — métricas del baseline (LogReg + Random Forest).
+- `reports/ablacion*.md` — ablación de features (señal real vs. fuga).
 - `reports/analisis_errores.md` — errores del detector en validación cruzada.
+- `reports/real/` — curvas ROC/PR y umbral sobre datos reales.
 
 ## Notas metodológicas (importantes para defender la tesis)
 

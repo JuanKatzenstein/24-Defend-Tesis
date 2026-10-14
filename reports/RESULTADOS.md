@@ -47,6 +47,23 @@ dataset es 2× más grande y más difícil (phishing de muchas plataformas, no u
 (config «solo señales de phishing»: RF AUC 0.907). No hay AUC perfecto ni atajo
 de formato. Ver `baseline_combinado.md` y `ablacion_combinado.md`.
 
+**Control de fuga por familias (grouped split).** El corpus tiene familias de
+hosts casi idénticos sobre una misma plataforma (p. ej. decenas de
+`itaucard*.000webhostapp.com`). Un split aleatorio podría repartirlas entre train
+y test e inflar las métricas. Se agrupó cada host por su dominio registrable
+(eTLD+1, solo sufijos ICANN: todo `*.000webhostapp.com` cae en un grupo) y se
+comparó `StratifiedKFold` (aleatorio) vs. `StratifiedGroupKFold` (grouped):
+
+| Modelo | AUC aleatorio | AUC grouped | F1 aleatorio | F1 grouped |
+|--------|-------------:|-----------:|------------:|-----------:|
+| Regresión Logística | 0.925 | 0.922 | 0.798 | 0.792 |
+| Random Forest | 0.943 | 0.937 | 0.850 | 0.830 |
+
+La caída es mínima (AUC −0.006, F1 −0.020 en RF): **no había fuga por familias**,
+el detector usa señal genuina y no memoriza familias de hosts. 3.690 dominios
+registrables para 4.633 hosts (media 1.3/grupo), así que las familias son minoría.
+Detalle en `eval_grouped.md`. Reproducir con `python3 eval_grouped.py`.
+
 **Generalización a los casos uruguayos (lo central para el alcance regional):**
 el detector entrenado sobre el corpus amplio **detecta 40 de los 42 casos UY
 (recall 0.95)**, con predicción out-of-fold (cada host lo clasifica un modelo que

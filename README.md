@@ -20,6 +20,7 @@ src/
   ingest_real.py     ingesta de feeds reales (OpenPhish/PhishTank + Tranco)
   ingest_corpus.py   incorpora el corpus curado (Corpus_VF) y etiqueta región UY/BR
   eval_region.py     recall del detector por región (UY / BR / otro)
+  eval_grouped.py    grouped split por dominio registrable (control de fuga)
 tools/
   plan_lote.py       Fase 2: muestreo estadístico de parámetros del corpus
   validar_lote.py    Fase 3: valida el plan (proporciones + no-repetición)

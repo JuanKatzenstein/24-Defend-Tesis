@@ -54,6 +54,30 @@ BR_MARCAS = re.compile(
 )
 BR_TLD = re.compile(r"\.br(\.|$)|\.com\.br", re.I)
 
+# "Piso ciego": phishing real alojado en infraestructura cruda (bucket S3 con
+# nombre aleatorio, hostname EC2, IP inversa) SIN ninguna señal léxica que un
+# detector solo-URL pueda usar. No son errores de etiqueta: son positivos
+# estructuralmente indetectables por features léxicas, y se reportan aparte.
+INFRA_CIEGA = re.compile(
+    r"^(ec2-|ip-)"
+    r"|^\d{1,3}(\.\d{1,3}){3}"
+    r"|^[a-z0-9]{8,}\.s3[.-]"
+    r"|\.host\.secureserver\.net$",
+    re.I,
+)
+# Marcas cuya presencia da señal léxica aunque el host sea infraestructura.
+MARCAS_SENAL = ["brou", "sucive", "antel", "itau", "mercadopago", "mercadolibre",
+                "americanas", "bradesco", "prex", "oca", "santander", "bbva",
+                "caixa", "correo", "scotiabank", "abitab", "redpago"]
+
+
+def tiene_senal_lexica(host: str) -> bool:
+    """False si el host es infraestructura cruda sin marca ni palabra reconocible."""
+    h = host.lower()
+    if any(m in h for m in MARCAS_SENAL):
+        return True
+    return not INFRA_CIEGA.search(h)
+
 
 def host_de(sub: str, dom: str) -> str:
     sub = (str(sub) if pd.notna(sub) else "").strip().strip(".").lower()
@@ -84,20 +108,22 @@ def cargar_corpus(path: Path) -> pd.DataFrame:
     df["host"] = [host_de(s, d) for s, d in zip(df["subdominio"], df["dominio"])]
     df["label"] = df["phishing"].astype(int)
     df["region"] = df["host"].map(region)
+    df["senal_lexica"] = df["host"].map(tiene_senal_lexica)
     df["fuente"] = "corpus_vf"
     # descarta hosts vacíos o claramente no-hosts (infra, sin punto)
     df = df[df["host"].str.contains(".", regex=False)].copy()
-    return df[["host", "label", "region", "fuente"]].drop_duplicates("host")
+    return df[["host", "label", "region", "senal_lexica", "fuente"]].drop_duplicates("host")
 
 
 def cargar_feed(path: Path, label: int) -> pd.DataFrame:
     if not path or not Path(path).exists():
-        return pd.DataFrame(columns=["host", "label", "region", "fuente"])
+        return pd.DataFrame(columns=["host", "label", "region", "senal_lexica", "fuente"])
     x = pd.read_csv(path)
     hosts = x["host"] if "host" in x.columns else x["url"].map(host_de_url)
     out = pd.DataFrame({"host": hosts.str.lower()})
     out["label"] = label
     out["region"] = out["host"].map(region)
+    out["senal_lexica"] = out["host"].map(tiene_senal_lexica)
     out["fuente"] = "feed_real"
     out = out[out["host"].astype(bool) & out["host"].str.contains(".", regex=False)]
     return out.drop_duplicates("host")
@@ -140,7 +166,7 @@ def main():
 
     escribir(ph, "phishing", "phishing_all.csv")
     escribir(be, "legit", "benign_all.csv")
-    todo[["host", "label", "region", "fuente"]].to_csv(
+    todo[["host", "label", "region", "senal_lexica", "fuente"]].to_csv(
         outdir / "corpus_regiones.csv", index=False)
 
     print(f"[ingest_corpus] phishing={len(ph)}  legit={len(be)}  "

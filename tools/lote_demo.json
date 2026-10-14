@@ -209,29 +209,29 @@
   },
   {
     "id": 17,
-    "marca": "sucive",
-    "sector": "pagos",
-    "respaldo_corpus": false,
-    "gramatica": "S1b",
-    "tld_o_plataforma": ".me",
-    "palabra_es": null,
-    "nn": null,
-    "estilo_inventar": "etiqueta de 5 letras al azar, con al menos 4 consonantes",
-    "path": "sin",
-    "largo_objetivo": "<=27"
-  },
-  {
-    "id": 18,
     "marca": "mercadolibre",
     "sector": "ecommerce",
     "respaldo_corpus": true,
     "gramatica": "P4",
-    "tld_o_plataforma": "netlify.app",
-    "palabra_es": "seguro",
-    "nn": "23",
+    "tld_o_plataforma": "github.io",
+    "palabra_es": "factura",
+    "nn": "58",
     "estilo_inventar": "guion, NN",
     "path": "sin",
     "largo_objetivo": "<=46"
+  },
+  {
+    "id": 18,
+    "marca": "correouruguayo",
+    "sector": "logistica",
+    "respaldo_corpus": true,
+    "gramatica": "S1",
+    "tld_o_plataforma": ".com",
+    "palabra_es": null,
+    "nn": null,
+    "estilo_inventar": "ajeno PSEUDO de 5-8 letras",
+    "path": "sin",
+    "largo_objetivo": "<=27"
   },
   {
     "id": 19,
@@ -239,11 +239,11 @@
     "sector": "tarjetas",
     "respaldo_corpus": true,
     "gramatica": "A1",
-    "tld_o_plataforma": ".com",
-    "palabra_es": "soporte",
+    "tld_o_plataforma": ".ml",
+    "palabra_es": "limites",
     "nn": null,
     "estilo_inventar": "guion",
-    "path": "/signin",
+    "path": "/login.php",
     "largo_objetivo": "<=27"
   },
   {
@@ -251,12 +251,12 @@
     "marca": "bbva",
     "sector": "banca",
     "respaldo_corpus": false,
-    "gramatica": "S1",
-    "tld_o_plataforma": ".info",
-    "palabra_es": null,
+    "gramatica": "A1",
+    "tld_o_plataforma": ".cam",
+    "palabra_es": "premios",
     "nn": null,
-    "estilo_inventar": "ajeno CONSONANTES de 6-8 letras",
-    "path": "/acceso/",
+    "estilo_inventar": "pegada",
+    "path": "sin",
     "largo_objetivo": "<=27"
   }
 ]

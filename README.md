@@ -96,11 +96,17 @@ Ver **`reports/RESULTADOS.md`** para el resumen completo.
 ## Hallazgos del validador (Fase 3)
 
 Al validar un lote generado por `plan_lote.py`, la Fase 3 detectó que las
-combinaciones `(marca, gramática)` pueden repetirse para gramáticas que *fuerzan*
-la marca (p. ej. `S1b`→`sucive`, `S3`→`brou`): el control de no-repetición en
-`armar_lote()` se hace sobre la marca sorteada, pero `fila()` la reescribe después,
-así que el dedup no cubre esos casos. Es justamente lo que un validador debe cazar.
-Queda documentado como defecto conocido del generador (no se modificó la Fase 2).
+combinaciones `(marca, gramática)` se repetían para gramáticas que *fuerzan* la
+marca (p. ej. `S1b`→`sucive`, `S3`→`brou`): el control de no-repetición en
+`armar_lote()` se hacía sobre la marca sorteada, pero `fila()` la reescribía
+después, así que el dedup no cubría esos casos. Es justamente lo que un validador
+debe cazar.
+
+**Corregido.** Se centralizó la resolución de la marca forzada en
+`marca_efectiva(marca_sorteada, gram)` y el dedup de `armar_lote()` ahora opera
+sobre esa marca efectiva; las gramáticas sin marca (`A3a`/`A3b`) quedan exentas.
+Verificado sobre 5 lotes acumulados (80 combinaciones, 0 repeticiones) y con el
+validador dando **✅ PASA** (ver `reports/validacion_lote.md`).
 
 ## Alcance
 

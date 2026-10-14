@@ -228,6 +228,19 @@ PATHS_GENERICOS = ["sin", "/login.php", "/index.php", "/acceso/", "/ingreso/", "
                     "/signin", "/login", "/index.html"]
 
 
+# Gramáticas que FUERZAN la marca final, ignorando la que se sorteó. El dedup de
+# combinaciones (marca, gramática) tiene que hacerse sobre esta marca efectiva, no
+# sobre la sorteada: si no, (sucive, S1b) o (brou, S3) se cuelan repetidas porque
+# cada vez se sortea una marca distinta que fila() después reescribe. Las
+# gramáticas sin marca (A3a/A3b) quedan exentas del dedup (no hay marca que repetir).
+MARCA_FORZADA = {"S1b": "sucive", "S3": "brou", "A3a": None, "A3b": None}
+
+
+def marca_efectiva(marca_sorteada, gram):
+    """Marca con la que va a quedar la fila, resolviendo las gramáticas que la fuerzan."""
+    return MARCA_FORZADA[gram] if gram in MARCA_FORZADA else marca_sorteada
+
+
 def fila(idx, marca_info, gram, hist: Historial, rng: random.Random):
     marca, sector, respaldo = marca_info
     palabra = None
@@ -313,7 +326,8 @@ def fila(idx, marca_info, gram, hist: Historial, rng: random.Random):
         hist.registrar_nn(nn)
     if palabra:
         hist.registrar_palabra(palabra)
-    hist.registrar_combo(marca, gram)
+    if marca is not None:  # las gramáticas sin marca no participan del dedup
+        hist.registrar_combo(marca, gram)
 
     return {
         "id": idx,
@@ -352,8 +366,13 @@ def armar_lote(n: int, hist: Historial, rng: random.Random):
 
         marca_info = marcas_ciclo[i % len(marcas_ciclo)]
         i += 1
-        # evitar repetir la misma combinación marca+gramática ya usada en lotes previos
-        if not hist.combo_libre(marca_info[0], gram):
+        # evitar repetir la misma combinación marca+gramática ya usada en lotes
+        # previos. El control se hace sobre la marca EFECTIVA (la que fila() va a
+        # dejar), no la sorteada: así las gramáticas que fuerzan la marca
+        # (S1b->sucive, S3->brou) no se repiten. Las gramáticas sin marca quedan
+        # exentas (no hay combinación que repetir).
+        marca_ef = marca_efectiva(marca_info[0], gram)
+        if marca_ef is not None and not hist.combo_libre(marca_ef, gram):
             continue
         filas.append(fila(len(filas) + 1, marca_info, gram, hist, rng))
     return filas

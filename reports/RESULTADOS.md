@@ -9,7 +9,50 @@ caso de estudio y (2) **datos reales** (OpenPhish + Tranco) como resultado princ
 |-------|--------|---|
 | Phishing | OpenPhish community feed (`openphish.com/feed.txt`) | 300 |
 | Legítimas | Tranco top-list (`tranco-list.eu`) | 2000 |
+| Phishing + legítimas | **Corpus curado `Corpus_VF`** (dominios etiquetados a mano) | 1160 / 1279 |
 | (regional) | `corpus_sintetico.csv` + hard negatives curados | 20 / 91 |
+
+### Dataset combinado (corpus curado + feeds reales)
+
+Uniendo el corpus curado con los feeds reales, deduplicando por host, el dataset
+a nivel dominio queda en **4.633 dominios únicos (1.440 phishing / 3.193 legítimos)**.
+Se etiqueta la región de cada host (`src/ingest_corpus.py` → `corpus_regiones.csv`):
+**42 phishing UY** (BROU, SUCIVE, Antel, Prex, OCA, Redpago) + 144 legítimos `.uy`,
+398 phishing BR y el resto LATAM/global. Reproducir con:
+
+```bash
+cd src
+python3 ingest_corpus.py --corpus ../data/raw/Corpus_VF_Dominios.xlsx \
+    --phishing-real ../data/raw/phishing_real.csv \
+    --benign-real   ../data/raw/benign_real.csv --outdir ../data/raw
+python3 build_dataset.py --phishing ../data/raw/phishing_all.csv \
+    --benign ../data/raw/benign_all.csv \
+    --out ../data/processed/dataset_combinado_host.csv --host-only
+python3 train_baseline.py --data ../data/processed/dataset_combinado_host.csv --report ../reports/baseline_combinado.md
+python3 ablation.py       --data ../data/processed/dataset_combinado_host.csv --report ../reports/ablacion_combinado.md
+python3 eval_region.py    --data ../data/processed/dataset_combinado_host.csv \
+    --regiones ../data/raw/corpus_regiones.csv --report ../reports/eval_region.md
+```
+
+**Resultado (CV 5-fold + hold-out 30%, seed 42):**
+
+| Modelo | CV-F1 | Test F1 | ROC-AUC |
+|--------|------:|--------:|--------:|
+| Regresión Logística | 0.805 | 0.763 | 0.912 |
+| Random Forest | 0.844 | 0.804 | 0.925 |
+
+Números más bajos que el escenario OpenPhish/Tranco pero **más honestos**: el
+dataset es 2× más grande y más difícil (phishing de muchas plataformas, no un
+único feed), y la ablación muestra que la señal sobrevive al quitar TLD y largos
+(config «solo señales de phishing»: RF AUC 0.907). No hay AUC perfecto ni atajo
+de formato. Ver `baseline_combinado.md` y `ablacion_combinado.md`.
+
+**Generalización a los casos uruguayos (lo central para el alcance regional):**
+el detector entrenado sobre el corpus amplio **detecta 40 de los 42 casos UY
+(recall 0.95)**, con predicción out-of-fold (cada host lo clasifica un modelo que
+no lo vio). Solo se escapan dos apex minimalistas sin señal léxica
+(`antel.gu.cc`, `trick.com.uy`), que necesitan señales externas (edad del dominio,
+certificado, reputación DNS). Detalle en `eval_region.md`.
 
 ## Resultado principal (datos reales, evaluación a nivel dominio)
 

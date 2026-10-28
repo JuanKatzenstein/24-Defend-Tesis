@@ -113,32 +113,57 @@ def calibracion(df: pd.DataFrame, phish: pd.DataFrame) -> dict:
         # sufijos de dos niveles vistos en todo el corpus (com.br, com.uy, ...)
         "sufijos_2n": {s for s in df.sufijo.dropna().unique() if "." in s},
         "plataformas": set(df.plataforma.dropna().unique()),
-        # perfiles reales por forma (largo, guiones, dígitos, gancho): cada fila del
-        # plan copia uno, así el lote reproduce la distribución conjunta del corpus.
-        "perfiles": {f: g[["host_len", "n_hyphens", "n_digits", "tiene_gancho"]]
-                        .astype(int).values.tolist()
-                     for f, g in phish.groupby("forma")},
+        "tokens_corpus": Counter(t for h in phish.hostname for t in tokens(h)),
+        "n_corpus": len(phish),
     }
 
 
-def muestrear(pesos: dict, k: int, rng: random.Random) -> list:
-    return rng.choices(list(pesos), weights=list(pesos.values()), k=k)
+def tokens(host: str) -> list[str]:
+    return [t for t in re.split(r"[^a-z]+", host) if len(t) >= 3]
+
+
+def moldes(phish: pd.DataFrame, cal: dict) -> list[dict]:
+    """Hosts reales de train que sirven de molde de una fila del plan.
+
+    Del molde salen forma, marca, sufijo o plataforma, dominio base (sub_ajeno),
+    largo, guiones, dígitos y gancho: el plan reproduce la distribución conjunta
+    del corpus en vez de combinar marginales. Se descartan los moldes que la
+    validación no clasificaría igual que el CSV (forma o dominio base distintos).
+    """
+    lo, hi = cal["host_len_min_max"]
+    out = []
+    for r in phish.itertuples():
+        if not lo <= len(r.hostname) <= hi or forma_host(r.hostname, cal) != r.forma:
+            continue
+        m = {"forma": r.forma, "molde": r.hostname,
+             "marca": r.marca_detectada if isinstance(r.marca_detectada, str) and r.marca_detectada else "ninguna",
+             "largo": len(r.hostname), "guiones": r.hostname.count("-"),
+             "digitos": sum(c.isdigit() for c in r.hostname),
+             "gancho": "sí" if r.tiene_gancho else "no"}
+        if r.forma == "plataforma":
+            m["plataforma"] = r.plataforma
+        else:
+            base, m["sufijo"] = dominio_registrado(r.hostname, cal)
+            if r.forma == "sub_ajeno":
+                m["base"] = base
+        out.append(m)
+    return out
 
 
 def plan_lote(cal: dict, n: int, rng: random.Random) -> list[dict]:
-    """Una fila por host a generar: forma + marca + sufijo/plataforma."""
-    filas = []
-    for i, forma in enumerate(muestrear(cal["forma"], n, rng), 1):
-        fila = {"id": i, "forma": forma, "marca": muestrear(cal["marca"], 1, rng)[0]}
-        largo, guiones, digitos, gancho = rng.choice(cal["perfiles"][forma])
-        fila |= {"largo": largo, "guiones": guiones, "digitos": digitos,
-                 "gancho": "sí" if gancho else "no"}
-        if forma == "plataforma":
-            fila["plataforma"] = muestrear(cal["plataforma"], 1, rng)[0]
-        else:
-            fila["sufijo"] = muestrear(cal["sufijo"], 1, rng)[0]
-        filas.append(fila)
-    return filas
+    """Una fila por host a generar, cada una calcada de un molde real distinto."""
+    return [{"id": i, **m} for i, m in enumerate(rng.sample(cal["moldes"], n), 1)]
+
+
+def sobreusadas(ya_generados: list[str], cal: dict, k: int = 30) -> list[str]:
+    """Palabras que el generador repite mucho más que el corpus real."""
+    if not ya_generados:
+        return []
+    cuenta = Counter(t for h in ya_generados for t in tokens(h))
+    n = len(ya_generados)
+    ratio = {t: (c / n) / ((cal["tokens_corpus"][t] + 1) / cal["n_corpus"])
+             for t, c in cuenta.items() if c >= 3}
+    return [t for t, r in sorted(ratio.items(), key=lambda x: -x[1]) if r >= 3][:k]
 
 
 def ejemplos(phish: pd.DataFrame, k_por_forma: int, rng: random.Random) -> list[str]:
@@ -180,16 +205,20 @@ Reglas:
   abundan los nombres inventados o gibberish (cesuho, lapsod), los números \
   pegados (web76109, galiciaar22), el typosquatting y los dominios comprometidos \
   de negocios ajenos. No armes nombres descriptivos tipo marca-verificar-cuenta.
-- Cada fila del plan trae un perfil tomado de un host real: largo total del \
-  hostname (±3 caracteres), cantidad exacta de guiones, cantidad aproximada de \
-  dígitos y si lleva palabra gancho (soporte, verificar, actualizar, envios, \
-  reembolso...). Respetalo: es lo que hace al lote indistinguible del corpus.
+- Cada fila del plan trae un MOLDE: un host real del corpus. Escribí un host \
+  nuevo que podría ser "hermano" del molde (mismo tipo de construcción: \
+  concatenado, gibberish, typosquatting, aleatorio tipo pages.dev, DNS dinámico, \
+  sitio comprometido...) pero con otro nombre: no lo copies ni lo cambies solo en \
+  números o guiones. Respetá su perfil: largo total (±3 caracteres), cantidad \
+  exacta de guiones, cantidad aproximada de dígitos y si lleva palabra gancho.
+- En la forma sub_ajeno usá EXACTAMENTE el dominio base de la fila (los atacantes \
+  reutilizan dominios comprometidos y de DNS dinámico); cambiá solo los subdominios.
 - Respetá exactamente la forma, la marca y el sufijo o la plataforma de cada fila del plan.
 
 Definición de formas (el sufijo es la parte final que se registra: com, com.br, com.uy, top...):
 - apex: <nombre>.<sufijo>, sin ningún subdominio (ej. patrón <marca>-<palabra>.<sufijo>).
-- sub_ajeno: uno o más subdominios sobre un dominio registrado ajeno a la marca \
-  (ej. <marca>.<dominio-inventado>.<sufijo>).
+- sub_ajeno: uno o más subdominios sobre el dominio base indicado, ajeno a la marca \
+  (ej. <subdominio>.<dominio-base>).
 - plataforma: subdominio sobre una plataforma de hosting gratuito \
   (ej. <algo>.pages.dev, <algo>.000webhostapp.com).
 
@@ -197,7 +226,8 @@ En el campo "patron" poné solo una etiqueta corta, no expliques tu razonamiento
 """
 
 
-def prompt_usuario(plan: list[dict], ejs: list[str], cal: dict, ya_generados: list[str]) -> str:
+def prompt_usuario(plan: list[dict], ejs: list[str], cal: dict, ya_generados: list[str],
+                   evitar: list[str] = ()) -> str:
     p10, p50, p90 = cal["host_len_p10_p50_p90"]
     lineas = [
         "Ejemplos reales del corpus (solo de referencia de estilo, NO copiar):",
@@ -212,16 +242,22 @@ def prompt_usuario(plan: list[dict], ejs: list[str], cal: dict, ya_generados: li
             ", ".join(ya_generados),
             "",
         ]
+    if evitar:
+        lineas += [
+            "Palabras que venís usando mucho más que el phishing real (evitalas salvo que el molde las tenga):",
+            ", ".join(evitar),
+            "",
+        ]
     lineas += [
         f"Generá exactamente {len(plan)} hostnames siguiendo este plan (una fila = un host, mismo id):",
         "",
-        "| id | forma | marca | sufijo / plataforma | largo | guiones | dígitos | gancho |",
-        "|----|-------|-------|---------------------|-------|---------|---------|--------|",
+        "| id | forma | marca | sufijo / dominio base / plataforma | largo | guiones | dígitos | gancho | molde |",
+        "|----|-------|-------|------------------------------------|-------|---------|---------|--------|-------|",
     ]
     for f in plan:
-        destino = f.get("plataforma") or "." + f["sufijo"]
+        destino = f.get("plataforma") or "." + f.get("base", f["sufijo"])
         lineas.append(f"| {f['id']} | {f['forma']} | {f['marca']} | {destino} "
-                      f"| {f['largo']} | {f['guiones']} | {f['digitos']} | {f['gancho']} |")
+                      f"| {f['largo']} | {f['guiones']} | {f['digitos']} | {f['gancho']} | {f['molde']} |")
     lineas += [
         "",
         "Cuando la marca sea 'ninguna', generá un host de phishing sin marca reconocible "
@@ -298,8 +334,11 @@ def motivo_rechazo(h: HostSintetico, fila: dict | None, cal: dict,
         return "no_respeta_plan"
     if fila["forma"] == "plataforma":
         return None if host.endswith("." + fila["plataforma"]) else "no_respeta_plan"
-    _, sufijo = dominio_registrado(host, cal)
-    return None if sufijo == fila["sufijo"] else "no_respeta_plan"
+    registrado, sufijo = dominio_registrado(host, cal)
+    if sufijo != fila["sufijo"] or registrado != fila.get("base", registrado):
+        return "no_respeta_plan"
+    # El host no puede ser el molde con otros dígitos o guiones.
+    return "copia_del_molde" if esqueleto(host) == esqueleto(fila["molde"]) else None
 
 
 def validar(lote: Lote, plan: list[dict], cal: dict,
@@ -344,6 +383,7 @@ def main():
 
     df, phish = cargar(args.csv)
     cal = calibracion(df, phish)
+    cal["moldes"] = moldes(phish, cal)
     vistos = set(df.hostname)
     esqueletos = {esqueleto(h) for h in df.hostname}
 
@@ -365,7 +405,7 @@ def main():
     if args.dry_run:
         plan = plan_lote(cal, args.por_lote, rng)
         prompt = prompt_usuario(plan, ejemplos(phish, args.ejemplos_por_forma, rng), cal,
-                                ya_generados[-MAX_YA_GENERADOS:])
+                                ya_generados[-MAX_YA_GENERADOS:], sobreusadas(ya_generados, cal))
         print("=== SYSTEM ===\n" + SYSTEM)
         print("=== USER ===\n" + prompt)
         return
@@ -377,7 +417,7 @@ def main():
     for n_lote in range(lote_ini, lote_ini + args.n_lotes):
         plan = plan_lote(cal, args.por_lote, rng)
         prompt = prompt_usuario(plan, ejemplos(phish, args.ejemplos_por_forma, rng), cal,
-                                ya_generados[-MAX_YA_GENERADOS:])
+                                ya_generados[-MAX_YA_GENERADOS:], sobreusadas(ya_generados, cal))
         try:
             lote, modelo_servido, hubo_fallback = llamar(client, args, prompt)
         except (anthropic.APIError, RuntimeError) as e:

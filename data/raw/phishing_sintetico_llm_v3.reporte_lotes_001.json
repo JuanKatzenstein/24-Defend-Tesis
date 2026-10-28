@@ -1,0 +1,27 @@
+{
+  "fecha_utc": "2026-10-28T22:28:39.801815+00:00",
+  "config": {
+    "modelo": "claude-opus-5-5",
+    "effort": "medium",
+    "por_lote": 25,
+    "ejemplos_por_forma": 6,
+    "seed": 42,
+    "system_prompt_sha": "38f9069af48f"
+  },
+  "config_hash": "513e730198635691",
+  "lotes": [
+    1,
+    10
+  ],
+  "pedidos": 250,
+  "aceptados": 208,
+  "lotes_con_error": 0,
+  "descartes": {
+    "casi_copia": 18,
+    "no_respeta_plan": 17,
+    "duplicado": 7
+  },
+  "modelos_servidos": {
+    "claude-opus-4-8": 208
+  }
+}

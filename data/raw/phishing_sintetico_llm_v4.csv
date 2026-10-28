@@ -1,0 +1,207 @@
+hostname,forma,marca,patron,phishing,fuente,split,grupo_split,lote,modelo_pedido,modelo_servido,effort,config_hash
+quvanto.digital,apex,ninguna,gibberish,1,sintetico_llm,train,quvanto.digital,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ramekodipo.giize.com,sub_ajeno,ninguna,dns dinamico gibberish,1,sintetico_llm,train,ramekodipo.giize.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+pelmaro.xyz,apex,ninguna,gibberish corto,1,sintetico_llm,train,pelmaro.xyz,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+savelux.pages.dev,plataforma,ninguna,plataforma gratuita,1,sintetico_llm,train,savelux.pages.dev,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+scotiabankrva.eshost.com.ar,sub_ajeno,scotiabank,marca+sufijo random,1,sintetico_llm,train,scotiabankrva.eshost.com.ar,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ry.mydplr.com,sub_ajeno,ninguna,sub corto dns,1,sintetico_llm,train,ry.mydplr.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+mfacebok.vn,apex,facebook,typosquatting,1,sintetico_llm,train,mfacebok.vn,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ad.gccont.com.br,sub_ajeno,ninguna,sub corto comprometido,1,sintetico_llm,train,ad.gccont.com.br,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+n.donotreply.biz,sub_ajeno,ninguna,sub corto,1,sintetico_llm,train,n.donotreply.biz,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+pruxale.com,apex,ninguna,gibberish,1,sintetico_llm,train,pruxale.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+vantesoft.com,apex,ninguna,nombre generico,1,sintetico_llm,train,vantesoft.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+secureweb.com,apex,ninguna,palabra generica,1,sintetico_llm,train,secureweb.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+faruzel7.com,apex,ninguna,gibberish+digito,1,sintetico_llm,train,faruzel7.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+mailservice.donotreply.biz,sub_ajeno,ninguna,sub generico,1,sintetico_llm,train,mailservice.donotreply.biz,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+xkv.tradebot.cloud,sub_ajeno,ninguna,sub corto cloud,1,sintetico_llm,train,xkv.tradebot.cloud,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalu-ofertas.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magalu-ofertas.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+bbc.compromisedblog.com,sub_ajeno,ninguna,sub comprometido,1,sintetico_llm,train,bbc.compromisedblog.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+k7amazon802.com,apex,amazon,marca+digitos,1,sintetico_llm,train,k7amazon802.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+mailchimpzone.clickz.com,sub_ajeno,ninguna,sub generico,1,sintetico_llm,train,mailchimpzone.clickz.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+globaltechnolab.com,apex,ninguna,nombre generico,1,sintetico_llm,train,globaltechnolab.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+mertol.rathedrals.com,sub_ajeno,ninguna,sub gibberish,1,sintetico_llm,train,mertol.rathedrals.com,1,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+verifiedaccountupdatecenter.netlify.app,plataforma,ninguna,gibberish largo plataforma,1,sintetico_llm,train,verifiedaccountupdatecenter.netlify.app,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+br-facebook.blogspot.com,plataforma,facebook,marca+pais blogspot,1,sintetico_llm,train,br-facebook.blogspot.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaluofertas.com.br,apex,magalu,marca concatenada,1,sintetico_llm,train,magaluofertas.com.br,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+greenwavetrust.org,apex,ninguna,negocio generico,1,sintetico_llm,train,greenwavetrust.org,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalupramim.com,apex,magalu,marca concatenada,1,sintetico_llm,train,magalupramim.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+facebook-lime-pi.vercel.app,plataforma,facebook,marca aleatorio vercel,1,sintetico_llm,train,facebook-lime-pi.vercel.app,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+serasaconsultacpf.netlify.app,plataforma,serasa,marca concatenada plataforma,1,sintetico_llm,train,serasaconsultacpf.netlify.app,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+morshantek.com,apex,ninguna,gibberish corto,1,sintetico_llm,train,morshantek.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+httpsview.com,apex,ninguna,prefijo https falso,1,sintetico_llm,train,httpsview.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+topgifz.biz,apex,ninguna,gibberish corto,1,sintetico_llm,train,topgifz.biz,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+zwkcampus.com,apex,ninguna,gibberish corto,1,sintetico_llm,train,zwkcampus.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+m-magalu.com,apex,magalu,prefijo+marca,1,sintetico_llm,train,m-magalu.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+bradescoseguranca.ddns.net,sub_ajeno,bradesco,marca ddns dinamico,1,sintetico_llm,train,bradescoseguranca.ddns.net,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+datlab.org,apex,ninguna,gibberish corto,1,sintetico_llm,train,datlab.org,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+mailreturn.donotreply.biz,sub_ajeno,ninguna,sub generico ajeno,1,sintetico_llm,train,mailreturn.donotreply.biz,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+qrklm.ptnvo.sa.com,sub_ajeno,ninguna,gibberish sub ajeno,1,sintetico_llm,train,qrklm.ptnvo.sa.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+winbet777.net,apex,ninguna,gibberish digitos,1,sintetico_llm,train,winbet777.net,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+loja-magalu.ibx.lat,sub_ajeno,magalu,palabra+marca sub,1,sintetico_llm,train,loja-magalu.ibx.lat,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+fuvmeto.myhome-server.de,sub_ajeno,ninguna,gibberish sub ajeno,1,sintetico_llm,train,fuvmeto.myhome-server.de,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+filmezon.blogspot.com,plataforma,ninguna,gibberish blogspot,1,sintetico_llm,train,filmezon.blogspot.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaluveros.com,apex,magalu,marca+gibberish,1,sintetico_llm,train,magaluveros.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+serveclaudepage.com,apex,ninguna,gibberish largo apex,1,sintetico_llm,train,serveclaudepage.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+americanasgift.com,apex,americanas,marca concatenada,1,sintetico_llm,train,americanasgift.com,2,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+notificar9.hyperionow.es,sub_ajeno,ninguna,subdominio+digito,1,sintetico_llm,train,notificar9.hyperionow.es,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+veltronix.net,apex,ninguna,nombre inventado,1,sintetico_llm,train,veltronix.net,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+globalhorizons.org,apex,ninguna,nombre generico,1,sintetico_llm,train,globalhorizons.org,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaludescon.com,apex,magalu,marca+concatenado,1,sintetico_llm,train,magaludescon.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+bradescocentralseg.com,apex,bradesco,marca+concatenado,1,sintetico_llm,train,bradescocentralseg.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+sinrespuesta.donotreply.biz,sub_ajeno,ninguna,subdominio generico,1,sintetico_llm,train,sinrespuesta.donotreply.biz,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+globaldomainsoct.vercel.app,plataforma,ninguna,gibberish+plataforma,1,sintetico_llm,train,globaldomainsoct.vercel.app,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+centervisiontek.com,apex,ninguna,nombre generico,1,sintetico_llm,train,centervisiontek.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalucomp.sslblindado.com,sub_ajeno,magalu,marca en subdominio,1,sintetico_llm,train,magalucomp.sslblindado.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalubr7.sslblindado.com,sub_ajeno,magalu,marca+digito subdominio,1,sintetico_llm,train,magalubr7.sslblindado.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+veramikodo.giize.com,sub_ajeno,ninguna,gibberish dns dinamico,1,sintetico_llm,train,veramikodo.giize.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ztaxconsult.com,apex,ninguna,nombre generico,1,sintetico_llm,train,ztaxconsult.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+info.dyn.com,sub_ajeno,ninguna,subdominio corto,1,sintetico_llm,train,info.dyn.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+verification.ms,apex,ninguna,palabra generica,1,sintetico_llm,train,verification.ms,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+shanghaimaoyigs.com,apex,ninguna,gibberish largo,1,sintetico_llm,train,shanghaimaoyigs.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+kortis.rathedrals.com,sub_ajeno,ninguna,gibberish subdominio,1,sintetico_llm,train,kortis.rathedrals.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+post.donotreply.biz,sub_ajeno,ninguna,subdominio corto,1,sintetico_llm,train,post.donotreply.biz,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+syriapressn.com,apex,ninguna,nombre generico,1,sintetico_llm,train,syriapressn.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+v3-login-netpay.vercel.app,plataforma,ninguna,guiones+digito plataforma,1,sintetico_llm,train,v3-login-netpay.vercel.app,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+americanas-x.joomla.com,plataforma,americanas,marca+plataforma,1,sintetico_llm,train,americanas-x.joomla.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+silentmorningglow.com,apex,ninguna,nombre generico,1,sintetico_llm,train,silentmorningglow.com,3,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+enviorapidopack.buzz,apex,ninguna,palabra generica concatenada,1,sintetico_llm,train,enviorapidopack.buzz,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+volantrix.com,apex,ninguna,gibberish corto,1,sintetico_llm,train,volantrix.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+kronix.com.br,apex,ninguna,gibberish corto,1,sintetico_llm,train,kronix.com.br,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+mkwjuehsdgtr.assindca.com,sub_ajeno,ninguna,gibberish en dominio comprometido,1,sintetico_llm,train,mkwjuehsdgtr.assindca.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+scotiabankchile.eshost.com.ar,sub_ajeno,scotiabank,marca+pais sub ajeno,1,sintetico_llm,train,scotiabankchile.eshost.com.ar,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+track.marketinghircasa.com,sub_ajeno,ninguna,sub generico comprometido,1,sintetico_llm,train,track.marketinghircasa.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+brendalex.com,apex,ninguna,nombre inventado,1,sintetico_llm,train,brendalex.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+tovrim.club,apex,ninguna,gibberish corto,1,sintetico_llm,train,tovrim.club,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+link.grazecart.com,sub_ajeno,ninguna,sub generico plataforma,1,sintetico_llm,train,link.grazecart.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+globalrelief.org,apex,ninguna,nombre ong generico,1,sintetico_llm,train,globalrelief.org,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ap-sdkqqz.com,apex,ninguna,gibberish con guion,1,sintetico_llm,train,ap-sdkqqz.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+zentivar.digital,apex,ninguna,gibberish,1,sintetico_llm,train,zentivar.digital,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+americanasbonus.com,apex,americanas,marca+palabra,1,sintetico_llm,train,americanasbonus.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+kvplisting.com,apex,ninguna,gibberish generico,1,sintetico_llm,train,kvplisting.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+avisosv7.hyperionhame.com,sub_ajeno,ninguna,sub generico con digito,1,sintetico_llm,train,avisosv7.hyperionhame.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+app-nubank.com,apex,nubank,prefijo+marca guion,1,sintetico_llm,train,app-nubank.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalupr7.sslblindado.com,sub_ajeno,magalu,marca+digito plataforma,1,sintetico_llm,train,magalupr7.sslblindado.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+cobrofacilpseqwe.com,apex,ninguna,generico pago gibberish,1,sintetico_llm,train,cobrofacilpseqwe.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaluvend.sslblindado.com,sub_ajeno,magalu,marca sub plataforma,1,sintetico_llm,train,magaluvend.sslblindado.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+q.dripemail2.com,sub_ajeno,ninguna,sub corto plataforma,1,sintetico_llm,train,q.dripemail2.com,4,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+kqwrnjvptfxmzdlbhscg.emailgids.net,sub_ajeno,ninguna,subdominio gibberish,1,sintetico_llm,train,kqwrnjvptfxmzdlbhscg.emailgids.net,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+vrunzex.com,apex,ninguna,gibberish corto,1,sintetico_llm,train,vrunzex.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalu-ofert.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magalu-ofert.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+seg-nubank.com,apex,nubank,prefijo+marca,1,sintetico_llm,train,seg-nubank.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+abono-cuentasptfy.com,apex,ninguna,gancho+servicio typo,1,sintetico_llm,train,abono-cuentasptfy.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+app.bb.com.br.appsegu.com,sub_ajeno,ninguna,subdominio imitando banco,1,sintetico_llm,train,app.bb.com.br.appsegu.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalurebex.com,apex,magalu,marca+gibberish,1,sintetico_llm,train,magalurebex.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+caixasim.rioinfos.com.br,sub_ajeno,caixa,marca subdominio,1,sintetico_llm,train,caixasim.rioinfos.com.br,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+account.broker,apex,ninguna,gancho sufijo raro,1,sintetico_llm,train,account.broker,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaluplus.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magaluplus.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+morningglasswork.com,apex,ninguna,nombre generico,1,sintetico_llm,train,morningglasswork.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaluemjunho.com,apex,magalu,marca+temporal,1,sintetico_llm,train,magaluemjunho.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+bozemiq7.com,apex,ninguna,gibberish+digito,1,sintetico_llm,train,bozemiq7.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalustore.black,apex,magalu,marca+palabra,1,sintetico_llm,train,magalustore.black,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+globaldomainsnov.vercel.app,plataforma,ninguna,plataforma dominio generico,1,sintetico_llm,train,globaldomainsnov.vercel.app,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+bradescoacesso.digital,apex,bradesco,marca+palabra,1,sintetico_llm,train,bradescoacesso.digital,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+bancodobrasilweb.com,apex,ninguna,banco generico,1,sintetico_llm,train,bancodobrasilweb.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+web-magalu.com,apex,magalu,prefijo+marca,1,sintetico_llm,train,web-magalu.com,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+robloxg.com.es,apex,roblox,marca typo,1,sintetico_llm,train,robloxg.com.es,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+telviro.digital,apex,ninguna,gibberish sufijo,1,sintetico_llm,train,telviro.digital,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+scotiabankcol.eshost.com.ar,sub_ajeno,scotiabank,marca subdominio,1,sintetico_llm,train,scotiabankcol.eshost.com.ar,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+io-verify.github.io,plataforma,ninguna,plataforma prefijo,1,sintetico_llm,train,io-verify.github.io,5,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalucompra.com,apex,magalu,marca concatenada,1,sintetico_llm,train,magalucompra.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+maildigos.net,apex,ninguna,gibberish apex,1,sintetico_llm,train,maildigos.net,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaludescontos.black,apex,magalu,marca concatenada,1,sintetico_llm,train,magaludescontos.black,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalu-fatura.com,apex,magalu,marca+guion palabra,1,sintetico_llm,train,magalu-fatura.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+silentglowfield.com,apex,ninguna,nombre inventado,1,sintetico_llm,train,silentglowfield.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+verificacionid.ms,apex,ninguna,generico sufijo ms,1,sintetico_llm,train,verificacionid.ms,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+avisosw2.hyperionhame.com,sub_ajeno,ninguna,sub+digito dominio ajeno,1,sintetico_llm,train,avisosw2.hyperionhame.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalux.shcheli.com,sub_ajeno,magalu,marca sub ajeno,1,sintetico_llm,train,magalux.shcheli.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+cmrbancoripley.org,apex,ninguna,generico apex,1,sintetico_llm,train,cmrbancoripley.org,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+americanas-b.joomla.com,plataforma,americanas,marca-letra plataforma,1,sintetico_llm,train,americanas-b.joomla.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+portalweb.cl,apex,ninguna,generico corto,1,sintetico_llm,train,portalweb.cl,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+actualizacioncuenta-dsny.com,apex,ninguna,generico+typo guion,1,sintetico_llm,train,actualizacioncuenta-dsny.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+murattekstil.net,apex,ninguna,negocio ajeno,1,sintetico_llm,train,murattekstil.net,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+kbqlisting.com,apex,ninguna,gibberish apex,1,sintetico_llm,train,kbqlisting.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+syriatvnet.com,apex,ninguna,negocio ajeno,1,sintetico_llm,train,syriatvnet.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+truvex.com,apex,ninguna,gibberish corto,1,sintetico_llm,train,truvex.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ingreso.bancointerapp.com,sub_ajeno,ninguna,sub generico dominio ajeno,1,sintetico_llm,train,ingreso.bancointerapp.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ver-mi-boleta.com,apex,ninguna,generico doble guion,1,sintetico_llm,train,ver-mi-boleta.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+pont.sytes.net,sub_ajeno,ninguna,sub corto dns dinamico,1,sintetico_llm,train,pont.sytes.net,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+kk-facebook.blogspot.com,plataforma,facebook,marca-prefijo blogspot,1,sintetico_llm,train,kk-facebook.blogspot.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+seg.nubank-login.com,sub_ajeno,nubank,sub+marca gancho login,1,sintetico_llm,train,seg.nubank-login.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+americanas-ofer.joomla.com,plataforma,americanas,marca-palabra plataforma,1,sintetico_llm,train,americanas-ofer.joomla.com,6,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+caixa.com.br.appsegu.com,sub_ajeno,ninguna,dominio oficial anidado,1,sintetico_llm,train,caixa.com.br.appsegu.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ravdun.com,apex,ninguna,gibberish corto,1,sintetico_llm,train,ravdun.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+petunia.ch,apex,ninguna,palabra generica,1,sintetico_llm,train,petunia.ch,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+io-check.github.io,plataforma,ninguna,plataforma gibberish,1,sintetico_llm,train,io-check.github.io,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+k.dripemail2.com,sub_ajeno,ninguna,subdominio minimo,1,sintetico_llm,train,k.dripemail2.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+netflix-mex.vercel.app,plataforma,netflix,marca+region,1,sintetico_llm,train,netflix-mex.vercel.app,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+qrv.yusercontent.com,sub_ajeno,ninguna,subdominio corto,1,sintetico_llm,train,qrv.yusercontent.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+stats.marketinghircasa.com,sub_ajeno,ninguna,subdominio ajeno,1,sintetico_llm,train,stats.marketinghircasa.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+dhl.pass-cargo.com,sub_ajeno,ninguna,logistica ajeno,1,sintetico_llm,train,dhl.pass-cargo.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+venbora.pages.dev,plataforma,ninguna,gibberish plataforma,1,sintetico_llm,train,venbora.pages.dev,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+hsbc-business.xyz,apex,ninguna,generico guion,1,sintetico_llm,train,hsbc-business.xyz,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+72kip.anixas.at,sub_ajeno,ninguna,subdominio numerico,1,sintetico_llm,train,72kip.anixas.at,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+dgi.gub.uy.tripod.com,sub_ajeno,ninguna,gob anidado,1,sintetico_llm,train,dgi.gub.uy.tripod.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+fastlanegripworks.com,apex,ninguna,negocio generico,1,sintetico_llm,train,fastlanegripworks.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+americanaspromo.com,apex,americanas,marca concatenada,1,sintetico_llm,train,americanaspromo.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+txe.tradebot.cloud,sub_ajeno,ninguna,subdominio corto,1,sintetico_llm,train,txe.tradebot.cloud,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+v0-pay-horizon4.vercel.app,plataforma,ninguna,v0 ruido,1,sintetico_llm,train,v0-pay-horizon4.vercel.app,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+quickhtmlpad.com,apex,ninguna,negocio generico,1,sintetico_llm,train,quickhtmlpad.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalucred8.sslblindado.com,sub_ajeno,magalu,marca+numero,1,sintetico_llm,train,magalucred8.sslblindado.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+instagram-two-beta.vercel.app,plataforma,instagram,marca+palabra ruido,1,sintetico_llm,train,instagram-two-beta.vercel.app,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+gravlok.com,apex,ninguna,gibberish corto,1,sintetico_llm,train,gravlok.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+veltrux.xyz,apex,ninguna,gibberish corto,1,sintetico_llm,train,veltrux.xyz,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+mail-itaupay.com,apex,ninguna,generico guion,1,sintetico_llm,train,mail-itaupay.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+rwflisting.com,apex,ninguna,gibberish listing,1,sintetico_llm,train,rwflisting.com,7,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+americanas-sac.joomla.com,plataforma,americanas,marca+subdominio joomla,1,sintetico_llm,train,americanas-sac.joomla.com,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+secureentry.ms,apex,ninguna,palabra generica apex,1,sintetico_llm,train,secureentry.ms,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalupromo.black,apex,magalu,marca+palabra apex,1,sintetico_llm,train,magalupromo.black,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalulojas.com.br,apex,magalu,marca+palabra apex,1,sintetico_llm,train,magalulojas.com.br,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ravnoz.com.br,apex,ninguna,gibberish apex,1,sintetico_llm,train,ravnoz.com.br,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+haomentujixie.com,apex,ninguna,gibberish apex,1,sintetico_llm,train,haomentujixie.com,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ofacebook.vn,apex,facebook,typosquatting marca,1,sintetico_llm,train,ofacebook.vn,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+globomachine.com,apex,ninguna,negocio generico apex,1,sintetico_llm,train,globomachine.com,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+de-facebook.blogspot.com,plataforma,facebook,marca+subdominio blogspot,1,sintetico_llm,train,de-facebook.blogspot.com,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+gp-apsxz.com,apex,ninguna,gibberish con guion,1,sintetico_llm,train,gp-apsxz.com,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalupromocoesnew.github.io,plataforma,magalu,marca+subdominio github,1,sintetico_llm,train,magalupromocoesnew.github.io,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+mailnoreply.donotreply.biz,sub_ajeno,ninguna,subdominio generico ajeno,1,sintetico_llm,train,mailnoreply.donotreply.biz,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+glenmarket.org,apex,ninguna,negocio generico apex,1,sintetico_llm,train,glenmarket.org,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+rk-facebook.blogspot.com,plataforma,facebook,marca+subdominio blogspot,1,sintetico_llm,train,rk-facebook.blogspot.com,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+bradescoacessos.zapto.org,sub_ajeno,bradesco,marca sobre dns dinamico,1,sintetico_llm,train,bradescoacessos.zapto.org,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+za.mydplr.com,sub_ajeno,ninguna,subdominio corto ajeno,1,sintetico_llm,train,za.mydplr.com,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+pago-mibanconet.com,apex,ninguna,gancho+gibberish con guion,1,sintetico_llm,train,pago-mibanconet.com,8,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+americanas-d.joomla.com,plataforma,americanas,marca+letra plataforma,1,sintetico_llm,train,americanas-d.joomla.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+americanas-sho.joomla.com,plataforma,americanas,marca+sufijo plataforma,1,sintetico_llm,train,americanas-sho.joomla.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalupro7.sslblindado.com,sub_ajeno,magalu,marca+numero hosting,1,sintetico_llm,train,magalupro7.sslblindado.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+view-your-invoices.com,apex,ninguna,frase generica guiones,1,sintetico_llm,train,view-your-invoices.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+lufekazimo.giize.com,sub_ajeno,ninguna,gibberish dns,1,sintetico_llm,train,lufekazimo.giize.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+vn.mydplr.com,sub_ajeno,ninguna,sub corto ajeno,1,sintetico_llm,train,vn.mydplr.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+e-magalux.com,apex,magalu,prefijo marca apex,1,sintetico_llm,train,e-magalux.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+avisosnew4.hyperionow.es,sub_ajeno,ninguna,gibberish numero sub,1,sintetico_llm,train,avisosnew4.hyperionow.es,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalunojunho.com,apex,magalu,typosquat concatenado,1,sintetico_llm,train,magalunojunho.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+cl-facebook.blogspot.com,plataforma,facebook,pais+marca blogspot,1,sintetico_llm,train,cl-facebook.blogspot.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+kwrtradingpartners.com,apex,ninguna,negocio generico,1,sintetico_llm,train,kwrtradingpartners.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+alert.smtpsendemail.com,sub_ajeno,ninguna,sub generico ajeno,1,sintetico_llm,train,alert.smtpsendemail.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaluvendas.com.br,apex,magalu,marca concatenada,1,sintetico_llm,train,magaluvendas.com.br,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+morningquietleaf.com,apex,ninguna,palabras aleatorias,1,sintetico_llm,train,morningquietleaf.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+mercadolibrepago.web.app,plataforma,mercadolibre,marca+plataforma,1,sintetico_llm,train,mercadolibrepago.web.app,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+info.donotreply.biz,sub_ajeno,ninguna,sub generico ajeno,1,sintetico_llm,train,info.donotreply.biz,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+veltorix.com,apex,ninguna,gibberish apex,1,sintetico_llm,train,veltorix.com,9,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+acesso.nubank-login.com,sub_ajeno,nubank,subdominio gancho,1,sintetico_llm,train,acesso.nubank-login.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaludesconto.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magaludesconto.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalux.lwele.com,sub_ajeno,magalu,marca en subdominio,1,sintetico_llm,train,magalux.lwele.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+facebook-blue-pi.vercel.app,plataforma,facebook,marca random vercel,1,sintetico_llm,train,facebook-blue-pi.vercel.app,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+web-magalusale.kesug.com,sub_ajeno,magalu,prefijo+marca,1,sintetico_llm,train,web-magalusale.kesug.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+knprt.zxvor.sa.com,sub_ajeno,ninguna,gibberish subdominios,1,sintetico_llm,train,knprt.zxvor.sa.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaluonline.com.br,apex,magalu,marca+palabra,1,sintetico_llm,train,magaluonline.com.br,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magaluvora.com,apex,magalu,marca+gibberish,1,sintetico_llm,train,magaluvora.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+kvp.tradebot.cloud,sub_ajeno,ninguna,subdominio corto,1,sintetico_llm,train,kvp.tradebot.cloud,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+deepakkumarsharma.github.io,plataforma,ninguna,nombre persona github,1,sintetico_llm,train,deepakkumarsharma.github.io,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+qrwjztnbkvmdlshpxgoa.emailgids.net,sub_ajeno,ninguna,gibberish largo,1,sintetico_llm,train,qrwjztnbkvmdlshpxgoa.emailgids.net,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+brizko.com,apex,ninguna,gibberish corto,1,sintetico_llm,train,brizko.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+dzm.yusercontent.com,sub_ajeno,ninguna,subdominio corto,1,sintetico_llm,train,dzm.yusercontent.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+americanasrj.com,apex,americanas,marca+sufijo geo,1,sintetico_llm,train,americanasrj.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+ar-facebook.blogspot.com,plataforma,facebook,geo+marca blogspot,1,sintetico_llm,train,ar-facebook.blogspot.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+kvmtrading.com,apex,ninguna,negocio generico,1,sintetico_llm,train,kvmtrading.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+login.bradescochat.com,sub_ajeno,bradesco,subdominio gancho,1,sintetico_llm,train,login.bradescochat.com,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+mercadolibreweb.web.app,plataforma,mercadolibre,marca+palabra webapp,1,sintetico_llm,train,mercadolibreweb.web.app,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24
+magalupromocao.black,apex,magalu,marca+palabra,1,sintetico_llm,train,magalupromocao.black,10,claude-opus-5-5,claude-opus-4-8,medium,b59e51ce67810c24

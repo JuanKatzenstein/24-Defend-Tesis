@@ -1,0 +1,148 @@
+hostname,forma,marca,patron,phishing,fuente,split,grupo_split,lote,modelo_pedido,modelo_servido,effort,config_hash
+magaludescontos.ru.com,sub_ajeno,magalu,marca+palabra concatenada,1,sintetico_llm,train,magaludescontos.ru.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-b.com,apex,americanas,marca+letra guion,1,sintetico_llm,train,americanas-b.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasrj.com,apex,americanas,marca+sufijo region,1,sintetico_llm,train,americanasrj.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalucred3.sslblindado.com,sub_ajeno,magalu,marca+palabra digito,1,sintetico_llm,train,magalucred3.sslblindado.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+k9bamazon728.com,apex,amazon,gibberish+marca+digitos,1,sintetico_llm,train,k9bamazon728.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-r.joomla.com,plataforma,americanas,marca+letra plataforma,1,sintetico_llm,train,americanas-r.joomla.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+web-magalupromo.kesug.com,sub_ajeno,magalu,prefijo+marca sub ajeno,1,sintetico_llm,train,web-magalupromo.kesug.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalux.fatways.com,sub_ajeno,magalu,marca typo sub ajeno,1,sintetico_llm,train,magalux.fatways.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-v.joomla.com,plataforma,americanas,marca+letra plataforma,1,sintetico_llm,train,americanas-v.joomla.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalulojas.com.br,apex,magalu,marca+palabra apex,1,sintetico_llm,train,magalulojas.com.br,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankclweb.eshost.com.ar,sub_ajeno,scotiabank,marca+region sub ajeno,1,sintetico_llm,train,scotiabankclweb.eshost.com.ar,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluofer.net,apex,magalu,marca+palabra apex,1,sintetico_llm,train,magaluofer.net,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+e-magalux.com,apex,magalu,prefijo guion marca,1,sintetico_llm,train,e-magalux.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaludejunho.com,apex,magalu,marca+frase corta,1,sintetico_llm,train,magaludejunho.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+web-magalu.com,apex,magalu,prefijo guion marca,1,sintetico_llm,train,web-magalu.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluvip.sslblindado.com,sub_ajeno,magalu,marca+palabra sub ajeno,1,sintetico_llm,train,magaluvip.sslblindado.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+bradescoacessonet.com,apex,bradesco,marca+palabras apex,1,sintetico_llm,train,bradescoacessonet.com,1,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-e.com,apex,americanas,marca+letra,1,sintetico_llm,train,americanas-e.com,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalut.shcheli.com,sub_ajeno,magalu,marca+letra subdominio,1,sintetico_llm,train,magalut.shcheli.com,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+mercadolibrelogin.web.app,plataforma,mercadolibre,marca+palabra hosting,1,sintetico_llm,train,mercadolibrelogin.web.app,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankcol.eshost.com.ar,sub_ajeno,scotiabank,marca+sufijo subdominio,1,sintetico_llm,train,scotiabankcol.eshost.com.ar,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalucompras.com.br,apex,magalu,marca+palabra,1,sintetico_llm,train,magalucompras.com.br,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+bradescoacesso.zapto.org,sub_ajeno,bradesco,marca+palabra DNS dinamico,1,sintetico_llm,train,bradescoacesso.zapto.org,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankargen.eshost.com.ar,sub_ajeno,scotiabank,marca+region subdominio,1,sintetico_llm,train,scotiabankargen.eshost.com.ar,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalupromocoes.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magalupromocoes.com,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+robloxg.com.es,apex,roblox,marca+letra,1,sintetico_llm,train,robloxg.com.es,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+login.bradescochat.com,sub_ajeno,bradesco,gancho+marca subdominio,1,sintetico_llm,train,login.bradescochat.com,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+facebook-blue-six.vercel.app,plataforma,facebook,marca+aleatorio vercel,1,sintetico_llm,train,facebook-blue-six.vercel.app,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasofertaslojas.com,apex,americanas,marca+palabras,1,sintetico_llm,train,americanasofertaslojas.com,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluvendas.black,apex,magalu,marca+palabra,1,sintetico_llm,train,magaluvendas.black,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+bradescoatendenet.com,apex,bradesco,marca+palabra,1,sintetico_llm,train,bradescoatendenet.com,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-amc.joomla.com,plataforma,americanas,marca+sufijo joomla,1,sintetico_llm,train,americanas-amc.joomla.com,2,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalupromoentrega.github.io,plataforma,magalu,plataforma hosting,1,sintetico_llm,train,magalupromoentrega.github.io,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+mercadolibresec.web.app,plataforma,mercadolibre,plataforma hosting,1,sintetico_llm,train,mercadolibresec.web.app,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+es-facebook.blogspot.com,plataforma,facebook,prefijo+marca plataforma,1,sintetico_llm,train,es-facebook.blogspot.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalured7.sslblindado.com,sub_ajeno,magalu,marca+num subdominio,1,sintetico_llm,train,magalured7.sslblindado.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalucompre.com,apex,magalu,marca+palabra concatenada,1,sintetico_llm,train,magalucompre.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalut.fatways.com,sub_ajeno,magalu,marca+subdominio ajeno,1,sintetico_llm,train,magalut.fatways.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaludotopo.com,apex,magalu,marca+gibberish concatenado,1,sintetico_llm,train,magaludotopo.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalukemor.com,apex,magalu,marca+gibberish,1,sintetico_llm,train,magalukemor.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankchile.eshost.com.ar,sub_ajeno,scotiabank,marca+pais subdominio,1,sintetico_llm,train,scotiabankchile.eshost.com.ar,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalupromocao.ru.com,sub_ajeno,magalu,marca+palabra subdominio,1,sintetico_llm,train,magalupromocao.ru.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasrs.com,apex,americanas,marca+region,1,sintetico_llm,train,americanasrs.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluven.sslblindado.com,sub_ajeno,magalu,marca+abrev subdominio,1,sintetico_llm,train,magaluven.sslblindado.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+kp-facebook.blogspot.com,plataforma,facebook,prefijo+marca plataforma,1,sintetico_llm,train,kp-facebook.blogspot.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluzone.black,apex,magalu,marca+palabra,1,sintetico_llm,train,magaluzone.black,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-k.joomla.com,plataforma,americanas,marca+letra plataforma,1,sintetico_llm,train,americanas-k.joomla.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalupro5.sslblindado.com,sub_ajeno,magalu,marca+num subdominio,1,sintetico_llm,train,magalupro5.sslblindado.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+serasaconsultacpf.netlify.app,plataforma,serasa,marca+palabra plataforma,1,sintetico_llm,train,serasaconsultacpf.netlify.app,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-p.com,apex,americanas,marca+letra apex,1,sintetico_llm,train,americanas-p.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalu-vendas.com,apex,magalu,marca+palabra guion,1,sintetico_llm,train,magalu-vendas.com,3,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluonline.com.br,apex,magalu,typosquatting marca,1,sintetico_llm,train,magaluonline.com.br,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluloja.black,apex,magalu,marca+palabra,1,sintetico_llm,train,magaluloja.black,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasrio.com,apex,americanas,marca+geo,1,sintetico_llm,train,americanasrio.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalune7.sslblindado.com,sub_ajeno,magalu,marca+sufijo numerico,1,sintetico_llm,train,magalune7.sslblindado.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasblackfrid.com,apex,americanas,marca+evento,1,sintetico_llm,train,americanasblackfrid.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-sac.joomla.com,plataforma,americanas,marca guion en plataforma,1,sintetico_llm,train,americanas-sac.joomla.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankchilek.eshost.com.ar,sub_ajeno,scotiabank,marca+geo en host gratuito,1,sintetico_llm,train,scotiabankchilek.eshost.com.ar,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalupix2.sslblindado.com,sub_ajeno,magalu,marca+sufijo numerico,1,sintetico_llm,train,magalupix2.sslblindado.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+lojas-magalu.ibx.lat,sub_ajeno,magalu,palabra guion marca,1,sintetico_llm,train,lojas-magalu.ibx.lat,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalupromos.ru.com,sub_ajeno,magalu,typosquatting en base ajena,1,sintetico_llm,train,magalupromos.ru.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+omagalu.one,apex,magalu,marca corto,1,sintetico_llm,train,omagalu.one,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalux.ycmeiya.com,sub_ajeno,magalu,marca en base gibberish,1,sintetico_llm,train,magalux.ycmeiya.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+bradescocontanet.com,apex,bradesco,marca+palabra,1,sintetico_llm,train,bradescocontanet.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+caixaseguros.com.br,apex,caixa,marca+servicio,1,sintetico_llm,train,caixaseguros.com.br,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalubotek.com,apex,magalu,marca+gibberish,1,sintetico_llm,train,magalubotek.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+acesso.bradescochat.com,sub_ajeno,bradesco,gancho en subdominio,1,sintetico_llm,train,acesso.bradescochat.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalucompra.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magalucompra.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluz.fatways.com,sub_ajeno,magalu,marca en host gratuito,1,sintetico_llm,train,magaluz.fatways.com,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+facebookk.vn,apex,facebook,typosquatting marca,1,sintetico_llm,train,facebookk.vn,4,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+br-facebook.blogspot.com,plataforma,facebook,prefijo pais+marca,1,sintetico_llm,train,br-facebook.blogspot.com,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluvoce.com.br,apex,magalu,marca+palabra,1,sintetico_llm,train,magaluvoce.com.br,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-b.joomla.com,plataforma,americanas,marca+letra joomla,1,sintetico_llm,train,americanas-b.joomla.com,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+web-magaluvenda.kesug.com,sub_ajeno,magalu,prefijo+marca,1,sintetico_llm,train,web-magaluvenda.kesug.com,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+bradesconegocio.digital,apex,bradesco,marca+palabra,1,sintetico_llm,train,bradesconegocio.digital,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+caixabank.rioinfos.com.br,sub_ajeno,caixa,marca en subdominio,1,sintetico_llm,train,caixabank.rioinfos.com.br,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalumax3.sslblindado.com,sub_ajeno,magalu,marca+sufijo+digito,1,sintetico_llm,train,magalumax3.sslblindado.com,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalur.lwele.com,sub_ajeno,magalu,marca+letra,1,sintetico_llm,train,magalur.lwele.com,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-v.com,apex,americanas,marca+letra,1,sintetico_llm,train,americanas-v.com,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalucomp.sslblindado.com,sub_ajeno,magalu,typo marca+palabra,1,sintetico_llm,train,magalucomp.sslblindado.com,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalu-mint.vercel.app,plataforma,magalu,marca+color vercel,1,sintetico_llm,train,magalu-mint.vercel.app,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+facebookz.vn,apex,facebook,marca+letra,1,sintetico_llm,train,facebookz.vn,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+ofertas-magalu.ibx.lat,sub_ajeno,magalu,palabra+marca,1,sintetico_llm,train,ofertas-magalu.ibx.lat,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalusuaconta.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magalusuaconta.com,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluoferta.net,apex,magalu,marca+palabra,1,sintetico_llm,train,magaluoferta.net,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankmexico.eshost.com.ar,sub_ajeno,scotiabank,marca+pais,1,sintetico_llm,train,scotiabankmexico.eshost.com.ar,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalubot5.sslblindado.com,sub_ajeno,magalu,marca+sufijo+digito,1,sintetico_llm,train,magalubot5.sslblindado.com,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankmexicol.eshost.com.ar,sub_ajeno,scotiabank,marca+pais+letra,1,sintetico_llm,train,scotiabankmexicol.eshost.com.ar,5,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalulo.com,apex,magalu,marca concatenada,1,sintetico_llm,train,magalulo.com,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluagosto.com,apex,magalu,marca+mes,1,sintetico_llm,train,magaluagosto.com,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasnatalpromo.com,apex,americanas,marca concatenada,1,sintetico_llm,train,americanasnatalpromo.com,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+k9amazon207.com,apex,amazon,prefijo+marca+num,1,sintetico_llm,train,k9amazon207.com,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+bradesconegocios.digital,apex,bradesco,marca concatenada,1,sintetico_llm,train,bradesconegocios.digital,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+instagram-two-beta.vercel.app,plataforma,instagram,marca+palabras+plataforma,1,sintetico_llm,train,instagram-two-beta.vercel.app,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+serasaregularize.netlify.app,plataforma,serasa,marca concatenada plataforma,1,sintetico_llm,train,serasaregularize.netlify.app,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankrea.eshost.com.ar,sub_ajeno,scotiabank,marca en hosting ajeno,1,sintetico_llm,train,scotiabankrea.eshost.com.ar,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+app-nubank.com,apex,nubank,prefijo+marca,1,sintetico_llm,train,app-nubank.com,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+web.nubank-login.com,sub_ajeno,nubank,sub+marca-gancho,1,sintetico_llm,train,web.nubank-login.com,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankbrasil.eshost.com.ar,sub_ajeno,scotiabank,marca+pais en hosting,1,sintetico_llm,train,scotiabankbrasil.eshost.com.ar,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasganhe.com,apex,americanas,marca concatenada,1,sintetico_llm,train,americanasganhe.com,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+bradescoseguranca.ddns.net,sub_ajeno,bradesco,marca en dns dinamico,1,sintetico_llm,train,bradescoseguranca.ddns.net,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+netflix-mex.vercel.app,plataforma,netflix,marca+pais plataforma,1,sintetico_llm,train,netflix-mex.vercel.app,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalu-ofertas.com,apex,magalu,marca-palabra,1,sintetico_llm,train,magalu-ofertas.com,6,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+rk-facebook.blogspot.com,plataforma,facebook,marca+inicial,1,sintetico_llm,train,rk-facebook.blogspot.com,7,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-lja.joomla.com,plataforma,americanas,marca+sufijo corto,1,sintetico_llm,train,americanas-lja.joomla.com,7,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+ofacebook.vn,apex,facebook,prefijo+marca,1,sintetico_llm,train,ofacebook.vn,7,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalu-store.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magalu-store.com,7,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaludesk.com,apex,magalu,marca+concatenado,1,sintetico_llm,train,magaludesk.com,7,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-t.joomla.com,plataforma,americanas,marca+inicial,1,sintetico_llm,train,americanas-t.joomla.com,7,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+caixaloja.rioinfos.com.br,sub_ajeno,caixa,marca en subdominio,1,sintetico_llm,train,caixaloja.rioinfos.com.br,7,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalutevo.com,apex,magalu,marca+gibberish,1,sintetico_llm,train,magalutevo.com,7,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluton6.sslblindado.com,sub_ajeno,magalu,marca+digito,1,sintetico_llm,train,magaluton6.sslblindado.com,7,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasbr.com,apex,americanas,marca+sufijo,1,sintetico_llm,train,americanasbr.com,7,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaludescontos.black,apex,magalu,marca+palabra,1,sintetico_llm,train,magaludescontos.black,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+serasaquitadebitos.netlify.app,plataforma,serasa,marca+palabra plataforma,1,sintetico_llm,train,serasaquitadebitos.netlify.app,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluvend.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magaluvend.com,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankchilen.eshost.com.ar,sub_ajeno,scotiabank,marca+pais sub,1,sintetico_llm,train,scotiabankchilen.eshost.com.ar,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+netflix-arg.vercel.app,plataforma,netflix,marca-pais plataforma,1,sintetico_llm,train,netflix-arg.vercel.app,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+x8kamazon207.com,apex,amazon,prefijo+marca+num,1,sintetico_llm,train,x8kamazon207.com,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalusuper.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magalusuper.com,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalupromo.black,apex,magalu,marca+palabra,1,sintetico_llm,train,magalupromo.black,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+kfacebook.vn,apex,facebook,letra+marca,1,sintetico_llm,train,kfacebook.vn,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalucblackfriday.com,apex,magalu,marca+palabra larga,1,sintetico_llm,train,magalucblackfriday.com,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+scotiabankmexi.eshost.com.ar,sub_ajeno,scotiabank,marca+pais sub,1,sintetico_llm,train,scotiabankmexi.eshost.com.ar,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-p.joomla.com,plataforma,americanas,marca-letra plataforma,1,sintetico_llm,train,americanas-p.joomla.com,8,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluvendaonline.com,apex,magalu,marca+palabra concatenada,1,sintetico_llm,train,magaluvendaonline.com,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalu-storm.vercel.app,plataforma,magalu,marca+palabra plataforma,1,sintetico_llm,train,magalu-storm.vercel.app,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+seg.nubank-login.com,sub_ajeno,nubank,gancho subdominio,1,sintetico_llm,train,seg.nubank-login.com,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+lojavip-magalu.ibx.lat,sub_ajeno,magalu,palabra+marca subdominio,1,sintetico_llm,train,lojavip-magalu.ibx.lat,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+serasaregulariza.netlify.app,plataforma,serasa,marca+palabra plataforma,1,sintetico_llm,train,serasaregulariza.netlify.app,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasweb.com,apex,americanas,marca+palabra concatenada,1,sintetico_llm,train,americanasweb.com,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+conta.bradescochat.com,sub_ajeno,bradesco,gancho subdominio,1,sintetico_llm,train,conta.bradescochat.com,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalupromos.black,apex,magalu,marca+palabra sufijo raro,1,sintetico_llm,train,magalupromos.black,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+mercadolibreweb.web.app,plataforma,mercadolibre,marca+palabra plataforma,1,sintetico_llm,train,mercadolibreweb.web.app,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magaluzap.com,apex,magalu,marca+palabra corta,1,sintetico_llm,train,magaluzap.com,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanas-x.com,apex,americanas,marca+letra guion,1,sintetico_llm,train,americanas-x.com,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalulojaweb.ru.com,sub_ajeno,magalu,marca subdominio sufijo ru,1,sintetico_llm,train,magalulojaweb.ru.com,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+netflix-bra.vercel.app,plataforma,netflix,marca+region plataforma,1,sintetico_llm,train,netflix-bra.vercel.app,9,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasuperof.com,apex,americanas,marca concatenada,1,sintetico_llm,train,americanasuperof.com,10,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalucompras.ru.com,sub_ajeno,magalu,marca concatenada,1,sintetico_llm,train,magalucompras.ru.com,10,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+americanasnow.com,apex,americanas,marca concatenada,1,sintetico_llm,train,americanasnow.com,10,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalito.com,apex,magalu,marca deformada,1,sintetico_llm,train,magalito.com,10,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalut.ycmeiya.com,sub_ajeno,magalu,marca+letra negocio ajeno,1,sintetico_llm,train,magalut.ycmeiya.com,10,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+magalusol7.sslblindado.com,sub_ajeno,magalu,marca+num hosting,1,sintetico_llm,train,magalusol7.sslblindado.com,10,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+mercadolibrecdn.web.app,plataforma,mercadolibre,marca+palabra plataforma,1,sintetico_llm,train,mercadolibrecdn.web.app,10,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+caixaprotege.com.br,apex,caixa,marca concatenada,1,sintetico_llm,train,caixaprotege.com.br,10,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475
+netflix-pay.vercel.app,plataforma,netflix,marca+palabra plataforma,1,sintetico_llm,train,netflix-pay.vercel.app,10,claude-opus-5-5,claude-opus-4-8,medium,a528d3e53c32c475

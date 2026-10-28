@@ -151,8 +151,11 @@ def moldes(phish: pd.DataFrame, cal: dict) -> list[dict]:
 
 
 def plan_lote(cal: dict, n: int, rng: random.Random) -> list[dict]:
-    """Una fila por host a generar, cada una calcada de un molde real distinto."""
-    return [{"id": i, **m} for i, m in enumerate(rng.sample(cal["moldes"], n), 1)]
+    """Una fila por host a generar, cada una calcada de un molde real (distinto
+    dentro del lote mientras el pool alcance)."""
+    elegidos = rng.sample(cal["moldes"], min(n, len(cal["moldes"])))
+    elegidos += rng.choices(cal["moldes"], k=n - len(elegidos))
+    return [{"id": i, **m} for i, m in enumerate(elegidos, 1)]
 
 
 def sobreusadas(ya_generados: list[str], cal: dict, k: int = 30) -> list[str]:
@@ -378,12 +381,19 @@ def main():
     ap.add_argument("--modelo", default=MODELO_DEFAULT)
     ap.add_argument("--effort", default="medium", choices=["low", "medium", "high", "xhigh", "max"])
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--moldes", type=Path, default=None,
+                    help="CSV con columna hostname: restringe los moldes a esos hosts "
+                         "(generación dirigida, ej. salida de moldes_dificiles.py)")
     ap.add_argument("--dry-run", action="store_true", help="imprime el prompt del primer lote y sale")
     args = ap.parse_args()
 
     df, phish = cargar(args.csv)
     cal = calibracion(df, phish)
     cal["moldes"] = moldes(phish, cal)
+    if args.moldes:
+        pedidos = set(pd.read_csv(args.moldes).hostname.str.lower())
+        cal["moldes"] = [m for m in cal["moldes"] if m["molde"] in pedidos]
+        print(f"Generación dirigida: {len(cal['moldes'])} moldes de {args.moldes}")
     vistos = set(df.hostname)
     esqueletos = {esqueleto(h) for h in df.hostname}
 
@@ -399,6 +409,7 @@ def main():
     rng = random.Random(f"{args.seed}-{lote_ini}")
     config = {"modelo": args.modelo, "effort": args.effort, "por_lote": args.por_lote,
               "ejemplos_por_forma": args.ejemplos_por_forma, "seed": args.seed,
+              "moldes": args.moldes.name if args.moldes else None,
               "system_prompt_sha": hashlib.sha256(SYSTEM.encode()).hexdigest()[:12]}
     config_hash = hashlib.sha256(json.dumps(config, sort_keys=True).encode()).hexdigest()[:16]
 

@@ -149,7 +149,8 @@ def recall_a_fpr(y, p, fpr_max=0.01) -> float:
     return float(tpr[fpr <= fpr_max].max())
 
 
-def utilidad(df: pd.DataFrame, F_df: pd.DataFrame, F_sint: pd.DataFrame) -> pd.DataFrame:
+def utilidad(df: pd.DataFrame, F_df: pd.DataFrame, F_sint: pd.DataFrame,
+             F_moldes: pd.DataFrame | None = None) -> pd.DataFrame:
     tr = (df.split == "train").values
     te = (df.split == "test").values
     legit_extra = df.split.isin(["valid_uy", "test_hosting"]).values  # solo legítimos
@@ -173,11 +174,16 @@ def utilidad(df: pd.DataFrame, F_df: pd.DataFrame, F_sint: pd.DataFrame) -> pd.D
 
     rng = np.random.default_rng(0)
     sobremuestreo = pos_tr[rng.choice(len(pos_tr), len(F_sint), replace=True)]
-    return pd.DataFrame([
+    filas = [
         correr(np.empty((0, X_tr.shape[1])), "A: solo real"),
         correr(sobremuestreo, f"B: real + {len(F_sint)} repetidos (control)"),
         correr(F_sint.values, f"C: real + {len(F_sint)} sintéticos"),
-    ])
+    ]
+    if F_moldes is not None:
+        # Control de la generación dirigida: repetir los mismos moldes difíciles.
+        rep_moldes = F_moldes.values[rng.choice(len(F_moldes), len(F_sint), replace=True)]
+        filas.append(correr(rep_moldes, f"D: real + {len(F_sint)} moldes difíciles repetidos (control)"))
+    return pd.DataFrame(filas)
 
 
 # ---------------------------------------------------------------------------
@@ -185,7 +191,8 @@ def utilidad(df: pd.DataFrame, F_df: pd.DataFrame, F_sint: pd.DataFrame) -> pd.D
 # ---------------------------------------------------------------------------
 
 def veredicto(integ, tabla_ks, div, fir, util) -> list[tuple[str, str, str]]:
-    a, b, c = util.pr_auc.values
+    a, b, c = util.pr_auc.values[:3]
+    d = util.pr_auc.values[3] if len(util) > 3 else -1
     chequeos = [
         ("Integridad", "OK" if integ["formato_invalido"] == integ["en_dataset"] == integ["fuga_lev1_valid_test"] == 0
          else "FALLA", "sin formato inválido, sin hosts del dataset, sin fuga a valid/test"),
@@ -195,8 +202,9 @@ def veredicto(integ, tabla_ks, div, fir, util) -> list[tuple[str, str, str]]:
          else "REVISAR", "<= 5% casi-duplicados internos y <= 5% memorización de train"),
         ("Firma", "OK" if fir["auc_ngramas"] <= 0.75 else "REVISAR" if fir["auc_ngramas"] <= 0.9 else "FALLA",
          f"AUC n-gramas {fir['auc_ngramas']:.2f} (<= 0.75 OK, > 0.9 el generador deja firma)"),
-        ("Utilidad", "OK" if c >= a and c >= b else "NO MEJORA",
-         f"PR-AUC test: real {a:.4f} | control {b:.4f} | sintético {c:.4f}"),
+        ("Utilidad", "OK" if c >= max(a, b, d) else "NO MEJORA",
+         f"PR-AUC test: real {a:.4f} | control {b:.4f} | sintético {c:.4f}"
+         + (f" | moldes repetidos {d:.4f}" if d >= 0 else "")),
     ]
     return chequeos
 
@@ -206,6 +214,8 @@ def main():
     ap.add_argument("--csv", required=True, type=Path)
     ap.add_argument("--sint", required=True, type=Path, help="CSV con columna hostname")
     ap.add_argument("--report", type=Path, default=None, help="reporte markdown de salida")
+    ap.add_argument("--moldes", type=Path, default=None,
+                    help="moldes de la generación dirigida (CSV con hostname): agrega el control D")
     args = ap.parse_args()
 
     df, phish = cargar(args.csv)
@@ -223,7 +233,8 @@ def main():
     div = diversidad(sint.hostname, phish.hostname)
     fir = firma(sint.hostname, phish.hostname, F_sint, F_real)
     print("Entrenando detectores (5 semillas x 3 experimentos)...", file=sys.stderr)
-    util = utilidad(df, F_df, F_sint)
+    F_moldes = matriz(pd.read_csv(args.moldes).hostname.str.lower()) if args.moldes else None
+    util = utilidad(df, F_df, F_sint, F_moldes)
     chequeos = veredicto(integ, tabla_ks, div, fir, util)
 
     L = [f"# Evaluación de sintéticos — `{args.sint.name}`", ""]

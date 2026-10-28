@@ -16,6 +16,8 @@ Cinco chequeos, todos contra el CSV combinado (dataset_combinado_v4.csv):
   5. Utilidad      detector entrenado con real vs. real + sintético, evaluado en
                    el TEST real. Control: real + sobremuestreo (repetir phishing
                    real), para ver si el sintético aporta más que repetir datos.
+                   Dos detectores: Random Forest sobre las features léxicas y
+                   regresión logística sobre n-gramas de caracteres (ve el texto).
 
 Las features se recalculan con src/features.py para TODOS los hosts (reales y
 sintéticos), así ambos grupos pasan por el mismo pipeline.
@@ -186,6 +188,44 @@ def utilidad(df: pd.DataFrame, F_df: pd.DataFrame, F_sint: pd.DataFrame,
     return pd.DataFrame(filas)
 
 
+def utilidad_ngramas(df: pd.DataFrame, sint_hosts, moldes_hosts=None) -> pd.DataFrame:
+    """Mismos experimentos que utilidad(), con un detector que ve el texto del host:
+    TF-IDF de n-gramas de caracteres (1-4) + regresión logística."""
+    tr = (df.split == "train").values
+    te = (df.split == "test").values
+    legit_extra = df.split.isin(["valid_uy", "test_hosting"]).values
+    h_tr, y_tr = df.hostname[tr].tolist(), df.phishing[tr].values
+    h_te, y_te = df.hostname[te].tolist(), df.phishing[te].values
+    h_leg = df.hostname[legit_extra].tolist()
+    pos_tr = np.asarray(h_tr)[y_tr == 1]
+    n = len(sint_hosts)
+
+    def correr(agregar, nombre):
+        res = []
+        for s in SEMILLAS:
+            extra = agregar(np.random.default_rng(s))
+            hosts, y = h_tr + list(extra), np.r_[y_tr, np.ones(len(extra))]
+            vec = TfidfVectorizer(analyzer="char", ngram_range=(1, 4), sublinear_tf=True, min_df=2)
+            lr = LogisticRegression(max_iter=3000, C=3.0, class_weight="balanced").fit(vec.fit_transform(hosts), y)
+            p = lr.predict_proba(vec.transform(h_te))[:, 1]
+            res.append({"pr_auc": average_precision_score(y_te, p), "roc_auc": roc_auc_score(y_te, p),
+                        "recall_fpr1": recall_a_fpr(y_te, p),
+                        "fpr_legit_extra": float((lr.predict_proba(vec.transform(h_leg))[:, 1] >= 0.5).mean())})
+        r = pd.DataFrame(res)
+        return {"experimento": nombre, **{c: r[c].mean() for c in r}, "pr_auc_sd": r.pr_auc.std()}
+
+    filas = [
+        correr(lambda rng: [], "A: solo real"),
+        correr(lambda rng: pos_tr[rng.choice(len(pos_tr), n, replace=True)], f"B: real + {n} repetidos (control)"),
+        correr(lambda rng: list(sint_hosts), f"C: real + {n} sintéticos"),
+    ]
+    if moldes_hosts is not None:
+        m = np.asarray(moldes_hosts)
+        filas.append(correr(lambda rng: m[rng.choice(len(m), n, replace=True)],
+                            f"D: real + {n} moldes difíciles repetidos (control)"))
+    return pd.DataFrame(filas)
+
+
 # ---------------------------------------------------------------------------
 # Veredicto y reporte
 # ---------------------------------------------------------------------------
@@ -233,8 +273,10 @@ def main():
     div = diversidad(sint.hostname, phish.hostname)
     fir = firma(sint.hostname, phish.hostname, F_sint, F_real)
     print("Entrenando detectores (5 semillas x 3 experimentos)...", file=sys.stderr)
-    F_moldes = matriz(pd.read_csv(args.moldes).hostname.str.lower()) if args.moldes else None
+    moldes_hosts = pd.read_csv(args.moldes).hostname.str.lower() if args.moldes else None
+    F_moldes = matriz(moldes_hosts) if args.moldes else None
     util = utilidad(df, F_df, F_sint, F_moldes)
+    util_ng = utilidad_ngramas(df, sint.hostname, moldes_hosts)
     chequeos = veredicto(integ, tabla_ks, div, fir, util)
 
     L = [f"# Evaluación de sintéticos — `{args.sint.name}`", ""]
@@ -256,6 +298,11 @@ def main():
           "|---|--:|--:|--:|--:|--:|"]
     L += [f"| {r.experimento} | {r.pr_auc:.4f} | {r.pr_auc_sd:.4f} | {r.roc_auc:.4f} | "
           f"{r.recall_fpr1:.3f} | {r.fpr_legit_extra:.3f} |" for r in util.itertuples()]
+    L += ["", "## 6. Utilidad con detector de n-gramas (TF-IDF 1-4 + regresión logística, test real)", "",
+          "| experimento | PR-AUC | ±sd | ROC-AUC | recall @ FPR 1% | FPR en legítimos extra |",
+          "|---|--:|--:|--:|--:|--:|"]
+    L += [f"| {r.experimento} | {r.pr_auc:.4f} | {r.pr_auc_sd:.4f} | {r.roc_auc:.4f} | "
+          f"{r.recall_fpr1:.3f} | {r.fpr_legit_extra:.3f} |" for r in util_ng.itertuples()]
     L += ["", "FPR en legítimos extra = proporción de hosts de valid_uy y test_hosting (todos legítimos) "
           "marcados como phishing con umbral 0.5."]
     texto = "\n".join(L) + "\n"

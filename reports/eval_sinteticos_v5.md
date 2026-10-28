@@ -68,4 +68,13 @@ Formas — real: {'apex': 0.404, 'sub_ajeno': 0.393, 'plataforma': 0.203} · sin
 | C: real + 147 sintéticos | 0.8752 | 0.0021 | 0.9178 | 0.456 | 0.105 |
 | D: real + 147 moldes difíciles repetidos (control) | 0.8763 | 0.0026 | 0.9159 | 0.468 | 0.089 |
 
+## 6. Utilidad con detector de n-gramas (TF-IDF 1-4 + regresión logística, test real)
+
+| experimento | PR-AUC | ±sd | ROC-AUC | recall @ FPR 1% | FPR en legítimos extra |
+|---|--:|--:|--:|--:|--:|
+| A: solo real | 0.9165 | 0.0000 | 0.9325 | 0.728 | 0.027 |
+| B: real + 147 repetidos (control) | 0.9144 | 0.0004 | 0.9305 | 0.724 | 0.026 |
+| C: real + 147 sintéticos | 0.9173 | 0.0000 | 0.9332 | 0.731 | 0.026 |
+| D: real + 147 moldes difíciles repetidos (control) | 0.9169 | 0.0004 | 0.9331 | 0.731 | 0.027 |
+
 FPR en legítimos extra = proporción de hosts de valid_uy y test_hosting (todos legítimos) marcados como phishing con umbral 0.5.

@@ -27,7 +27,7 @@ import pandas as pd
 
 import generar_sinteticos as g
 
-FILA = re.compile(r"^\| (\d+) \| (\S+) \| (.+?) \| (\S+) \|$", re.M)
+FILA = re.compile(r"^\| (\d+) \| (\S+) \| (.+?) \| (\S+) \|.*$", re.M)
 PEDIDOS: list[dict] = []
 PRIMER_LOTE: list[str] = []
 

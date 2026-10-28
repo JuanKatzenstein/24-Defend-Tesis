@@ -1,0 +1,28 @@
+{
+  "fecha_utc": "2026-10-28T22:22:08.064474+00:00",
+  "config": {
+    "modelo": "claude-opus-5-5",
+    "effort": "medium",
+    "por_lote": 25,
+    "ejemplos_por_forma": 6,
+    "seed": 42,
+    "system_prompt_sha": "a0c8097a27ee"
+  },
+  "config_hash": "576fd52acf8b3d82",
+  "lotes": [
+    1,
+    10
+  ],
+  "pedidos": 250,
+  "aceptados": 224,
+  "lotes_con_error": 0,
+  "descartes": {
+    "no_respeta_plan": 6,
+    "duplicado": 6,
+    "casi_copia": 13,
+    "largo_fuera_de_rango": 1
+  },
+  "modelos_servidos": {
+    "claude-opus-4-8": 224
+  }
+}

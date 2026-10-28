@@ -1,0 +1,225 @@
+hostname,forma,marca,patron,phishing,fuente,split,grupo_split,lote,modelo_pedido,modelo_servido,effort,config_hash
+magalu.farolnovoluz.com,sub_ajeno,magalu,marca+dominio ajeno,1,sintetico_llm,train,magalu.farolnovoluz.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau-71-20-2026-b4a-93-cdx-1187.duckdns.org,plataforma,itau,marca+numeros plataforma,1,sintetico_llm,train,itau-71-20-2026-b4a-93-cdx-1187.duckdns.org,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+promo-saldao-novo-verao2025.blogspot.com,plataforma,ninguna,gibberish plataforma,1,sintetico_llm,train,promo-saldao-novo-verao2025.blogspot.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+veskomilo.black,apex,ninguna,gibberish apex,1,sintetico_llm,train,veskomilo.black,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+sicredi-area-cliente-seguro-online-acesso22-br.repl.co,plataforma,sicredi,marca larga plataforma,1,sintetico_llm,train,sicredi-area-cliente-seguro-online-acesso22-br.repl.co,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadolibre.vendas-br.com,sub_ajeno,mercadolibre,marca+dominio ajeno,1,sintetico_llm,train,mercadolibre.vendas-br.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+web9028471.com,apex,ninguna,web+numeros,1,sintetico_llm,train,web9028471.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-ofertas.net,apex,americanas,marca+palabra,1,sintetico_llm,train,americanas-ofertas.net,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+luphoda.com,apex,ninguna,gibberish apex,1,sintetico_llm,train,luphoda.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.reembolso-online.com,sub_ajeno,americanas,marca+gancho,1,sintetico_llm,train,americanas.reembolso-online.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.promovaidenovo.com,sub_ajeno,magalu,marca+dominio ajeno,1,sintetico_llm,train,magalu.promovaidenovo.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.loja-descontos.net,sub_ajeno,americanas,marca+dominio ajeno,1,sintetico_llm,train,americanas.loja-descontos.net,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadolibrear.com,apex,mercadolibre,marca pegada,1,sintetico_llm,train,mercadolibrear.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+meli-challenge.pages.dev,plataforma,mercadolibre,marca+palabra plataforma,1,sintetico_llm,train,meli-challenge.pages.dev,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+telmorec-cesud.com,apex,ninguna,gibberish guion,1,sintetico_llm,train,telmorec-cesud.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+prex.cuenta-soporte-verificar-acceso-online.com,sub_ajeno,prex,marca+gancho largo,1,sintetico_llm,train,prex.cuenta-soporte-verificar-acceso-online.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+gobrelmada.com,apex,ninguna,gibberish apex,1,sintetico_llm,train,gobrelmada.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadolibre22.com.br,apex,mercadolibre,marca+numeros,1,sintetico_llm,train,mercadolibre22.com.br,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+kolsvemita.pages.dev,plataforma,ninguna,gibberish plataforma,1,sintetico_llm,train,kolsvemita.pages.dev,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+promocaoverao-saldao.000webhostapp.com,plataforma,ninguna,gibberish plataforma,1,sintetico_llm,train,promocaoverao-saldao.000webhostapp.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.ofertas-shop.com,sub_ajeno,americanas,marca+dominio ajeno,1,sintetico_llm,train,americanas.ofertas-shop.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradescoseguro.net,apex,bradesco,marca pegada,1,sintetico_llm,train,bradescoseguro.net,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+login.seguro-area-cliente.com,sub_ajeno,ninguna,subdominios genericos,1,sintetico_llm,train,login.seguro-area-cliente.com,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+area4-login7-acesso2-seguro3.repl.co,plataforma,ninguna,gibberish numeros plataforma,1,sintetico_llm,train,area4-login7-acesso2-seguro3.repl.co,1,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-saldao22.repl.co,plataforma,americanas,marca+gibberish numerico,1,sintetico_llm,train,americanas-saldao22.repl.co,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+kve.rtd483.top,sub_ajeno,ninguna,sub gibberish numerico,1,sintetico_llm,train,kve.rtd483.top,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.vdo.com,sub_ajeno,americanas,marca+sub corto,1,sintetico_llm,train,americanas.vdo.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-ofertasloja.ga,apex,americanas,marca+palabra,1,sintetico_llm,train,americanas-ofertasloja.ga,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+porlvekamidos.com,apex,ninguna,gibberish apex,1,sintetico_llm,train,porlvekamidos.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercado-pago-br-ar.com,apex,mercadopago,marca+region,1,sintetico_llm,train,mercado-pago-br-ar.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradesco-acesso.app,apex,bradesco,marca+palabra,1,sintetico_llm,train,bradesco-acesso.app,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bancogalicia.lovento.site,sub_ajeno,bancogalicia,marca+dominio ajeno,1,sintetico_llm,train,bancogalicia.lovento.site,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magaluvendas.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magaluvendas.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+nubank-reembolso-cliente-online.com,apex,nubank,marca+gancho,1,sintetico_llm,train,nubank-reembolso-cliente-online.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+soporte.cesumo-ltda4.verificar.com,sub_ajeno,ninguna,gancho+gibberish,1,sintetico_llm,train,soporte.cesumo-ltda4.verificar.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+telmorecasona.com,apex,ninguna,negocio generico,1,sintetico_llm,train,telmorecasona.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+login.kesvo7.com.br,sub_ajeno,ninguna,sub+gibberish,1,sintetico_llm,train,login.kesvo7.com.br,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+amricana.com,apex,americanas,typosquatting,1,sintetico_llm,train,amricana.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+distribuidoralamano.com,apex,ninguna,negocio generico,1,sintetico_llm,train,distribuidoralamano.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadolibre.ventas-ar.com.ar,sub_ajeno,mercadolibre,marca+region,1,sintetico_llm,train,mercadolibre.ventas-ar.com.ar,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+meli-shop.com,apex,mercadolibre,abreviatura marca,1,sintetico_llm,train,meli-shop.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+a7-b32-c9-d14-e2-f8-11-20-250-promo.blogspot.com,plataforma,ninguna,gibberish numerico,1,sintetico_llm,train,a7-b32-c9-d14-e2-f8-11-20-250-promo.blogspot.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-saldao-loja.pages.dev,plataforma,americanas,marca+palabra,1,sintetico_llm,train,americanas-saldao-loja.pages.dev,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalulojaonline.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magalulojaonline.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-promo22.pantheonsite.io,plataforma,americanas,marca+numeros,1,sintetico_llm,train,americanas-promo22.pantheonsite.io,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+comercial-del-sur-mayorista.lupanveko.com,sub_ajeno,ninguna,negocio+dominio ajeno,1,sintetico_llm,train,comercial-del-sur-mayorista.lupanveko.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+santander9.com,apex,santander,marca+numero,1,sintetico_llm,train,santander9.com,2,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+serasa.vextu.cc,sub_ajeno,serasa,marca+dominio inventado,1,sintetico_llm,train,serasa.vextu.cc,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+kp9-dram-velto-sconix-brup-ha2-vex.pages.dev,plataforma,ninguna,gibberish con guiones,1,sintetico_llm,train,kp9-dram-velto-sconix-brup-ha2-vex.pages.dev,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.loja-vendasbr.com,sub_ajeno,americanas,marca+dominio ajeno,1,sintetico_llm,train,americanas.loja-vendasbr.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.central22-atendimento-br-online-vendas08.com,sub_ajeno,magalu,marca+dominio largo numerado,1,sintetico_llm,train,magalu.central22-atendimento-br-online-vendas08.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.shop9.click,sub_ajeno,americanas,marca+dominio corto,1,sintetico_llm,train,americanas.shop9.click,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.lojaofertas.joomla.com,plataforma,americanas,marca en plataforma,1,sintetico_llm,train,americanas.lojaofertas.joomla.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+america-nas-of.com,apex,americanas,typosquat con guiones,1,sintetico_llm,train,america-nas-of.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+meli-comprasbr.pages.dev,plataforma,mercadolibre,abreviatura marca plataforma,1,sintetico_llm,train,meli-comprasbr.pages.dev,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.vendas-sp.cc,sub_ajeno,americanas,marca+dominio ajeno,1,sintetico_llm,train,americanas.vendas-sp.cc,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradesco.net-seguranca.com,sub_ajeno,bradesco,marca+dominio ajeno,1,sintetico_llm,train,bradesco.net-seguranca.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+caixaacesso.com,apex,caixa,marca pegada,1,sintetico_llm,train,caixaacesso.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+ver2tsa.cmpdo-74.sysnet08.cc,sub_ajeno,ninguna,gibberish numerado,1,sintetico_llm,train,ver2tsa.cmpdo-74.sysnet08.cc,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+vortineb.com,apex,ninguna,gibberish,1,sintetico_llm,train,vortineb.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradescoatendimento-br.com,apex,bradesco,marca+palabra,1,sintetico_llm,train,bradescoatendimento-br.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mp-reembolso.com,apex,mercadopago,marca+gancho,1,sintetico_llm,train,mp-reembolso.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+amazon.ofertas.tk,sub_ajeno,amazon,marca+dominio ajeno,1,sintetico_llm,train,amazon.ofertas.tk,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+distribuidorasol.com,apex,ninguna,negocio generico,1,sintetico_llm,train,distribuidorasol.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+soporte.cuentas.verificacionclienteonlineseguro.com,sub_ajeno,ninguna,gancho largo sin marca,1,sintetico_llm,train,soporte.cuentas.verificacionclienteonlineseguro.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+sucive.pagos-online-acceso22.repl.co,plataforma,sucive,marca en plataforma,1,sintetico_llm,train,sucive.pagos-online-acceso22.repl.co,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+serasaconsulta8.biz,apex,serasa,marca numerada,1,sintetico_llm,train,serasaconsulta8.biz,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.ofer.com,sub_ajeno,americanas,marca+dominio corto,1,sintetico_llm,train,americanas.ofer.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau-5-82-19-4a-7c-33-b1-90-2.000webhostapp.com,plataforma,itau,marca+segmentos numericos,1,sintetico_llm,train,itau-5-82-19-4a-7c-33-b1-90-2.000webhostapp.com,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+kverssomtelda98.sysport40.pages.dev,plataforma,ninguna,gibberish numerado,1,sintetico_llm,train,kverssomtelda98.sysport40.pages.dev,3,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-ofert.vendasbr09.ga,sub_ajeno,americanas,marca+sub inventado,1,sintetico_llm,train,americanas-ofert.vendasbr09.ga,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu-saldao-ofertasloja.com.br,apex,magalu,marca+gancho comercial,1,sintetico_llm,train,magalu-saldao-ofertasloja.com.br,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau-acessar.com,apex,itau,marca+gancho,1,sintetico_llm,train,itau-acessar.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+sicredi.kelvo22.com,sub_ajeno,sicredi,marca+sub inventado,1,sintetico_llm,train,sicredi.kelvo22.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+comercial-delmayorista.shop,apex,ninguna,negocio generico,1,sintetico_llm,train,comercial-delmayorista.shop,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.loja-ofertas-br.com,sub_ajeno,americanas,marca+sub comercial,1,sintetico_llm,train,americanas.loja-ofertas-br.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.ver-loja-online-br.com,sub_ajeno,magalu,marca+sub comercial,1,sintetico_llm,train,magalu.ver-loja-online-br.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bncestdo.com,apex,bancoestado,typosquatting,1,sintetico_llm,train,bncestdo.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+porval-ko.com,apex,ninguna,gibberish,1,sintetico_llm,train,porval-ko.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-promocaoverao-saldao4.pages.dev,plataforma,americanas,marca+gancho plataforma,1,sintetico_llm,train,americanas-promocaoverao-saldao4.pages.dev,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+amercanas.com,apex,americanas,typosquatting,1,sintetico_llm,train,amercanas.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+distribuidorasur.com,apex,ninguna,negocio generico,1,sintetico_llm,train,distribuidorasur.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+serasaconsulta.pages.dev,plataforma,serasa,marca plataforma,1,sintetico_llm,train,serasaconsulta.pages.dev,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.vendasloja.com,sub_ajeno,magalu,marca+sub comercial,1,sintetico_llm,train,magalu.vendasloja.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradesco-acesso.vercel.app,plataforma,bradesco,marca+palabra plataforma,1,sintetico_llm,train,bradesco-acesso.vercel.app,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.ofertasweb.com,sub_ajeno,magalu,marca+sub comercial,1,sintetico_llm,train,magalu.ofertasweb.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+web4.kelsonar.com,sub_ajeno,ninguna,gibberish+numero,1,sintetico_llm,train,web4.kelsonar.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+ventas.comercialdelsur.com,sub_ajeno,ninguna,negocio generico,1,sintetico_llm,train,ventas.comercialdelsur.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadopago.ar7-ventas.com,sub_ajeno,mercadopago,marca+sub inventado,1,sintetico_llm,train,mercadopago.ar7-ventas.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+sp20ct-velqor-biz-14-dravon-9-hervak23-sconul.github.io,plataforma,ninguna,gibberish largo plataforma,1,sintetico_llm,train,sp20ct-velqor-biz-14-dravon-9-hervak23-sconul.github.io,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+antelsoporteclientes.com,apex,antel,marca+palabra,1,sintetico_llm,train,antelsoporteclientes.com,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+kverso832-dram14.sysport09.repl.co,plataforma,ninguna,gibberish plataforma,1,sintetico_llm,train,kverso832-dram14.sysport09.repl.co,4,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.vendaslojabr.com,sub_ajeno,americanas,marca+sub inventado,1,sintetico_llm,train,americanas.vendaslojabr.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.ofertaslojacentral.co,sub_ajeno,magalu,marca+sub inventado,1,sintetico_llm,train,magalu.ofertaslojacentral.co,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+vel-torex48.com,apex,ninguna,gibberish+numeros,1,sintetico_llm,train,vel-torex48.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.k7-br2-v9-sc14-dr8-pm3-he11-qo5.tk,sub_ajeno,magalu,marca+tokens guionados,1,sintetico_llm,train,magalu.k7-br2-v9-sc14-dr8-pm3-he11-qo5.tk,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadolibreof.com.br,apex,mercadolibre,marca+palabra pegada,1,sintetico_llm,train,mercadolibreof.com.br,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.cc,apex,americanas,marca sola,1,sintetico_llm,train,americanas.cc,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadolibre-arcompra.com,apex,mercadolibre,marca+guion,1,sintetico_llm,train,mercadolibre-arcompra.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+cesvuto.com.br,apex,ninguna,gibberish,1,sintetico_llm,train,cesvuto.com.br,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+nubank-reembolso-clientepix.pages.dev,plataforma,nubank,marca+gancho,1,sintetico_llm,train,nubank-reembolso-clientepix.pages.dev,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+web217.lanvostarget.com,sub_ajeno,ninguna,sub numerico,1,sintetico_llm,train,web217.lanvostarget.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+acceso.portalvednacliente.com,sub_ajeno,ninguna,sub generico,1,sintetico_llm,train,acceso.portalvednacliente.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+login.kervotexas.com,sub_ajeno,ninguna,sub login,1,sintetico_llm,train,login.kervotexas.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.loja-ofertas-br9.vendas2.com,sub_ajeno,magalu,marca+subs guionados,1,sintetico_llm,train,magalu.loja-ofertas-br9.vendas2.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu-saldao22109.pages.dev,plataforma,magalu,marca+numeros,1,sintetico_llm,train,magalu-saldao22109.pages.dev,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+portalweb20931acceso.pantheonsite.io,plataforma,ninguna,generico+numeros,1,sintetico_llm,train,portalweb20931acceso.pantheonsite.io,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadolibrecompras.com,apex,mercadolibre,marca+palabra pegada,1,sintetico_llm,train,mercadolibrecompras.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+ver-acceso.000webhostapp.com,plataforma,ninguna,generico guionado,1,sintetico_llm,train,ver-acceso.000webhostapp.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau-5-acesso2-seg-br.joomla.com,plataforma,itau,marca+tokens guionados,1,sintetico_llm,train,itau-5-acesso2-seg-br.joomla.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau.segurancaacesso.com,sub_ajeno,itau,marca+sub inventado,1,sintetico_llm,train,itau.segurancaacesso.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanaslojaofertasbr.000webhostapp.com,plataforma,americanas,marca+palabras pegadas,1,sintetico_llm,train,americanaslojaofertasbr.000webhostapp.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalucompra.com,apex,magalu,marca+palabra pegada,1,sintetico_llm,train,magalucompra.com,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+facebook-login-seg2-acesso14-br.pages.dev,plataforma,facebook,marca+tokens guionados,1,sintetico_llm,train,facebook-login-seg2-acesso14-br.pages.dev,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadolibrevendas.site,apex,mercadolibre,marca+palabra pegada,1,sintetico_llm,train,mercadolibrevendas.site,5,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+login.velcoratex-sys08.com,sub_ajeno,ninguna,gibberish+numeros,1,sintetico_llm,train,login.velcoratex-sys08.com,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.br2-v9-sc14-dr8.pantheonsite.io,plataforma,magalu,marca+tokens guionados,1,sintetico_llm,train,magalu.br2-v9-sc14-dr8.pantheonsite.io,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bancoestado.acceso-cl-portal2.vercel.app,plataforma,bancoestado,marca+subdominios,1,sintetico_llm,train,bancoestado.acceso-cl-portal2.vercel.app,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau.segurancaacessonet.net,sub_ajeno,itau,marca+dominio ajeno,1,sintetico_llm,train,itau.segurancaacessonet.net,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.loja-br209.com,sub_ajeno,americanas,marca+loja+numeros,1,sintetico_llm,train,americanas.loja-br209.com,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradesco-seg.de,apex,bradesco,marca+palabra corta,1,sintetico_llm,train,bradesco-seg.de,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+sicredi-acesso.pages.dev,plataforma,sicredi,marca+acceso,1,sintetico_llm,train,sicredi-acesso.pages.dev,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadolibreof.com,apex,mercadolibre,marca+sufijo,1,sintetico_llm,train,mercadolibreof.com,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bancoestado.cl-5-82-19-4a-7c.vercel.app,plataforma,bancoestado,marca+hex tokens,1,sintetico_llm,train,bancoestado.cl-5-82-19-4a-7c.vercel.app,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+santander.cl-k7-v9-sc14-dr8-pm3.pages.dev,plataforma,santander,marca+tokens guionados,1,sintetico_llm,train,santander.cl-k7-v9-sc14-dr8-pm3.pages.dev,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itauacesso.online,apex,itau,marca+acceso,1,sintetico_llm,train,itauacesso.online,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.saldao22-br9.de,sub_ajeno,magalu,marca+saldao+numeros,1,sintetico_llm,train,magalu.saldao22-br9.de,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradesco.net22.club,sub_ajeno,bradesco,marca+dominio ajeno,1,sintetico_llm,train,bradesco.net22.club,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+kelvo.dravon.com,sub_ajeno,ninguna,gibberish sub,1,sintetico_llm,train,kelvo.dravon.com,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau5acesso82.pantheonsite.io,plataforma,itau,marca+numeros,1,sintetico_llm,train,itau5acesso82.pantheonsite.io,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+nubankpix.000webhostapp.com,plataforma,nubank,marca+pix,1,sintetico_llm,train,nubankpix.000webhostapp.com,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+sucivex.porval.com,sub_ajeno,ninguna,gibberish sub,1,sintetico_llm,train,sucivex.porval.com,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-reembolso.net,apex,americanas,marca+gancho,1,sintetico_llm,train,americanas-reembolso.net,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+ventas.distribuidorasol.com,sub_ajeno,ninguna,negocio generico,1,sintetico_llm,train,ventas.distribuidorasol.com,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+ml-envios7.ventas.shop,sub_ajeno,mercadolibre,marca+gancho+numeros,1,sintetico_llm,train,ml-envios7.ventas.shop,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradescoacesso.pages.dev,plataforma,bradesco,marca+acceso,1,sintetico_llm,train,bradescoacesso.pages.dev,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+acceso.portalvelcorex.com,sub_ajeno,ninguna,gibberish portal,1,sintetico_llm,train,acceso.portalvelcorex.com,6,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau.kervona.com,sub_ajeno,itau,marca+dominio inventado,1,sintetico_llm,train,itau.kervona.com,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.ofertas-vendasloja.com,sub_ajeno,magalu,marca+sub inventado,1,sintetico_llm,train,magalu.ofertas-vendasloja.com,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+brou-acceso82.sysvortek19.vercel.app,plataforma,brou,marca+plataforma,1,sintetico_llm,train,brou-acceso82.sysvortek19.vercel.app,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu-br4-v9-sc12-dr7.000webhostapp.com,plataforma,magalu,marca+tokens,1,sintetico_llm,train,magalu-br4-v9-sc12-dr7.000webhostapp.com,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itauacessonet.com,apex,itau,marca+palabra pegada,1,sintetico_llm,train,itauacessonet.com,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalucompras.help,apex,magalu,marca+sufijo raro,1,sintetico_llm,train,magalucompras.help,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+velcorex-sys4-portal82.netlify.app,plataforma,ninguna,gibberish+numeros,1,sintetico_llm,train,velcorex-sys4-portal82.netlify.app,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanasofertasloja.pages.dev,plataforma,americanas,marca+plataforma,1,sintetico_llm,train,americanasofertasloja.pages.dev,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+kverzo5-dravon82-sc14a.vercel.app,plataforma,ninguna,gibberish tokens,1,sintetico_llm,train,kverzo5-dravon82-sc14a.vercel.app,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+scotiabank-cl.tk,apex,scotiabank,marca+pais,1,sintetico_llm,train,scotiabank-cl.tk,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.vendasloja29br.app,sub_ajeno,americanas,marca+dominio inventado,1,sintetico_llm,train,americanas.vendasloja29br.app,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+portalweb209accesoclie.repl.co,plataforma,ninguna,portal+numeros,1,sintetico_llm,train,portalweb209accesoclie.repl.co,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadopago.vendas-ar.de,sub_ajeno,mercadopago,marca+dominio ajeno,1,sintetico_llm,train,mercadopago.vendas-ar.de,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+nubankclientepix.com,apex,nubank,marca+palabra pegada,1,sintetico_llm,train,nubankclientepix.com,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau.segurancaacesso.cc,sub_ajeno,itau,marca+sub seguridad,1,sintetico_llm,train,itau.segurancaacesso.cc,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas4-br2-saldao9-loja13.blogspot.com,plataforma,americanas,marca+tokens numeros,1,sintetico_llm,train,americanas4-br2-saldao9-loja13.blogspot.com,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-saldaoverao.com,apex,americanas,marca+palabra,1,sintetico_llm,train,americanas-saldaoverao.com,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.loja-ofertasvendasbr.com,sub_ajeno,magalu,marca+sub inventado,1,sintetico_llm,train,magalu.loja-ofertasvendasbr.com,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau.verificar-acesso-seguro-cliente-br.black,sub_ajeno,itau,marca+gancho verificar,1,sintetico_llm,train,itau.verificar-acesso-seguro-cliente-br.black,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+distribuidoranorte.cf,apex,ninguna,negocio generico,1,sintetico_llm,train,distribuidoranorte.cf,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau-br2-v9-sc14-dr8.pantvortek.pages.dev,plataforma,itau,marca+tokens,1,sintetico_llm,train,itau-br2-v9-sc14-dr8.pantvortek.pages.dev,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+comercial-delsur.com,apex,ninguna,negocio generico,1,sintetico_llm,train,comercial-delsur.com,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau-acessoseg.velcorex.vercel.app,plataforma,itau,marca+plataforma,1,sintetico_llm,train,itau-acessoseg.velcorex.vercel.app,7,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+envios-rapido.co,apex,ninguna,gancho+palabra,1,sintetico_llm,train,envios-rapido.co,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magaluvendas.tk,apex,magalu,marca+palabra,1,sintetico_llm,train,magaluvendas.tk,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+acceso.portalcivexnet.com,sub_ajeno,ninguna,sub generico,1,sintetico_llm,train,acceso.portalcivexnet.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+login.servimorcenter.com,sub_ajeno,ninguna,sub generico,1,sintetico_llm,train,login.servimorcenter.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+www.distribuidorapel.com,sub_ajeno,ninguna,negocio generico,1,sintetico_llm,train,www.distribuidorapel.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+a.b-c.pervona-sys.com,sub_ajeno,ninguna,multi sub gibberish,1,sintetico_llm,train,a.b-c.pervona-sys.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+web76109.cl-82-19-4a-7c-2026.korvanet.com,sub_ajeno,ninguna,numeros pegados,1,sintetico_llm,train,web76109.cl-82-19-4a-7c-2026.korvanet.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bancoestadoacceso.pages.dev,plataforma,bancoestado,marca+acceso,1,sintetico_llm,train,bancoestadoacceso.pages.dev,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+porvex-sys22-net19.com,apex,ninguna,gibberish+numeros,1,sintetico_llm,train,porvex-sys22-net19.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+ventas.lojacenter9.com,sub_ajeno,ninguna,negocio+numero,1,sintetico_llm,train,ventas.lojacenter9.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-br2-v9-sc14-loja8.vercel.app,plataforma,americanas,marca+codigos,1,sintetico_llm,train,americanas-br2-v9-sc14-loja8.vercel.app,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalusaldao.com,apex,magalu,marca+palabra,1,sintetico_llm,train,magalusaldao.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+a-cl-82-19-4a.korvanet-sys.vercel.app,plataforma,ninguna,codigos gibberish,1,sintetico_llm,train,a-cl-82-19-4a.korvanet-sys.vercel.app,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu.saldao22109vendas.com,sub_ajeno,magalu,marca+numeros,1,sintetico_llm,train,magalu.saldao22109vendas.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+ml-vendas.korvo.net,sub_ajeno,ninguna,gibberish+palabra,1,sintetico_llm,train,ml-vendas.korvo.net,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+porval-sistema-webaccesos.club,apex,ninguna,gibberish compuesto,1,sintetico_llm,train,porval-sistema-webaccesos.club,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magaluofertas.joomla.com,plataforma,magalu,marca+ofertas,1,sintetico_llm,train,magaluofertas.joomla.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+antelclientes.pantheonsite.io,plataforma,antel,marca+clientes,1,sintetico_llm,train,antelclientes.pantheonsite.io,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradescopj.com,apex,bradesco,marca corta,1,sintetico_llm,train,bradescopj.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+acceso.velcorex7portal.vip,sub_ajeno,ninguna,gibberish+numero,1,sintetico_llm,train,acceso.velcorex7portal.vip,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+ml-envios.kervo.com,sub_ajeno,ninguna,gibberish,1,sintetico_llm,train,ml-envios.kervo.com,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu22109-br4-sc14.pages.dev,plataforma,magalu,marca+numeros,1,sintetico_llm,train,magalu22109-br4-sc14.pages.dev,8,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+porvexdistribuidora.net,apex,ninguna,gibberish largo,1,sintetico_llm,train,porvexdistribuidora.net,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+kelvora-sys.com,apex,ninguna,gibberish+guion,1,sintetico_llm,train,kelvora-sys.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradesco.acesso-seg.com,sub_ajeno,bradesco,marca+sub inventado,1,sintetico_llm,train,bradesco.acesso-seg.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.ofertasvendasbr.cc,sub_ajeno,americanas,marca+sub inventado,1,sintetico_llm,train,americanas.ofertasvendasbr.cc,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bancoestado.cl-k7-v9-sc14.korvanet.com,sub_ajeno,bancoestado,marca+tokens,1,sintetico_llm,train,bancoestado.cl-k7-v9-sc14.korvanet.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanasvendas.ml,apex,americanas,marca+palabra,1,sintetico_llm,train,americanasvendas.ml,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magaluof.000webhostapp.com,plataforma,magalu,marca+plataforma,1,sintetico_llm,train,magaluof.000webhostapp.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+cesudravonsys.com,apex,ninguna,gibberish,1,sintetico_llm,train,cesudravonsys.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau.kervona-net.com,sub_ajeno,itau,marca+sub inventado,1,sintetico_llm,train,itau.kervona-net.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+porval22-sys.app,apex,ninguna,gibberish+digitos,1,sintetico_llm,train,porval22-sys.app,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+distribuidoradelsur.com,apex,ninguna,negocio generico,1,sintetico_llm,train,distribuidoradelsur.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+mercadopagovendas.cf,apex,mercadopago,marca+palabra,1,sintetico_llm,train,mercadopagovendas.cf,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+serasacpf.com,apex,serasa,marca+palabra,1,sintetico_llm,train,serasacpf.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bancoestado-cl.com,apex,bancoestado,marca+pais,1,sintetico_llm,train,bancoestado-cl.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+a-82-19-4a-7c-2026-korvanet-sys.duckdns.org,plataforma,ninguna,tokens+plataforma,1,sintetico_llm,train,a-82-19-4a-7c-2026-korvanet-sys.duckdns.org,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau-acesso-seg.github.io,plataforma,itau,marca+plataforma,1,sintetico_llm,train,itau-acesso-seg.github.io,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanassaldao.com,apex,americanas,marca+palabra,1,sintetico_llm,train,americanassaldao.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+porvexsys-webaccesos.000webhostapp.com,plataforma,ninguna,gibberish+plataforma,1,sintetico_llm,train,porvexsys-webaccesos.000webhostapp.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+brouaccesoclientes.com,apex,brou,marca+palabra,1,sintetico_llm,train,brouaccesoclientes.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+santanderaccesoseguro.click,apex,santander,marca+palabra,1,sintetico_llm,train,santanderaccesoseguro.click,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas.vendas-loja.site,sub_ajeno,americanas,marca+sub inventado,1,sintetico_llm,train,americanas.vendas-loja.site,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+web2209.korvanet-sys14.com,sub_ajeno,ninguna,gibberish+tokens,1,sintetico_llm,train,web2209.korvanet-sys14.com,9,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+magalu-saldao.biz,apex,magalu,marca+palabra,1,sintetico_llm,train,magalu-saldao.biz,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+facebook-login.com,apex,facebook,marca+palabra,1,sintetico_llm,train,facebook-login.com,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+graventoralsistemas.de,apex,ninguna,gibberish,1,sintetico_llm,train,graventoralsistemas.de,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+galicia-ar-acceso.web8-portalnetseguro.repl.co,plataforma,bancogalicia,marca+plataforma,1,sintetico_llm,train,galicia-ar-acceso.web8-portalnetseguro.repl.co,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+acceso.servimor22centerweb49.com.br,sub_ajeno,ninguna,negocio+digitos,1,sintetico_llm,train,acceso.servimor22centerweb49.com.br,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+porvex-sistemas.net,apex,ninguna,gibberish,1,sintetico_llm,train,porvex-sistemas.net,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradescoacesso.de,apex,bradesco,marca+palabra,1,sintetico_llm,train,bradescoacesso.de,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+kelvorasys.000webhostapp.com,plataforma,ninguna,gibberish plataforma,1,sintetico_llm,train,kelvorasys.000webhostapp.com,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-vendas-loja.pantheonsite.io,plataforma,americanas,marca+plataforma,1,sintetico_llm,train,americanas-vendas-loja.pantheonsite.io,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+facebooksegur.net,apex,facebook,marca+palabra,1,sintetico_llm,train,facebooksegur.net,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bradesco9.pages.dev,plataforma,bradesco,marca+digito plataforma,1,sintetico_llm,train,bradesco9.pages.dev,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+korvanet-distribui.cc,apex,ninguna,negocio generico,1,sintetico_llm,train,korvanet-distribui.cc,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+porval-webacceso.pages.dev,plataforma,ninguna,gibberish plataforma,1,sintetico_llm,train,porval-webacceso.pages.dev,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itau.korvo2209.com,sub_ajeno,itau,marca+digitos,1,sintetico_llm,train,itau.korvo2209.com,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+bancogaliciaonlineacceso.com,apex,bancogalicia,marca+palabra,1,sintetico_llm,train,bancogaliciaonlineacceso.com,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+itauacessopj.com,apex,itau,marca+palabra,1,sintetico_llm,train,itauacessopj.com,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+acceso.pervona.com,sub_ajeno,ninguna,gibberish subdominio,1,sintetico_llm,train,acceso.pervona.com,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+serasaconsultacpf.net,apex,serasa,marca+palabra,1,sintetico_llm,train,serasaconsultacpf.net,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+login.distribuidoranortecentral.click,sub_ajeno,ninguna,negocio generico,1,sintetico_llm,train,login.distribuidoranortecentral.click,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82
+americanas-express-saldao-vendas.webloja9portal.repl.co,plataforma,americanas,marca+plataforma,1,sintetico_llm,train,americanas-express-saldao-vendas.webloja9portal.repl.co,10,claude-opus-5-5,claude-opus-4-8,medium,576fd52acf8b3d82

@@ -113,6 +113,11 @@ def calibracion(df: pd.DataFrame, phish: pd.DataFrame) -> dict:
         # sufijos de dos niveles vistos en todo el corpus (com.br, com.uy, ...)
         "sufijos_2n": {s for s in df.sufijo.dropna().unique() if "." in s},
         "plataformas": set(df.plataforma.dropna().unique()),
+        # perfiles reales por forma (largo, guiones, dígitos, gancho): cada fila del
+        # plan copia uno, así el lote reproduce la distribución conjunta del corpus.
+        "perfiles": {f: g[["host_len", "n_hyphens", "n_digits", "tiene_gancho"]]
+                        .astype(int).values.tolist()
+                     for f, g in phish.groupby("forma")},
     }
 
 
@@ -125,6 +130,9 @@ def plan_lote(cal: dict, n: int, rng: random.Random) -> list[dict]:
     filas = []
     for i, forma in enumerate(muestrear(cal["forma"], n, rng), 1):
         fila = {"id": i, "forma": forma, "marca": muestrear(cal["marca"], 1, rng)[0]}
+        largo, guiones, digitos, gancho = rng.choice(cal["perfiles"][forma])
+        fila |= {"largo": largo, "guiones": guiones, "digitos": digitos,
+                 "gancho": "sí" if gancho else "no"}
         if forma == "plataforma":
             fila["plataforma"] = muestrear(cal["plataforma"], 1, rng)[0]
         else:
@@ -167,9 +175,15 @@ Reglas:
 - No uses dominios oficiales reales de las marcas (ej. itau.com.uy, antel.com.uy) \
   como dominio registrado: el dominio registrado siempre es ajeno a la marca, \
   salvo en la forma "plataforma" donde es la plataforma de hosting.
-- Imitá el ruido real: no todos llevan marca, algunos usan palabras gancho \
-  (soporte, verificar, actualizar, envios, reembolso...), mezclas de español y \
-  portugués, números, typosquatting, subdominios aleatorios tipo gibberish.
+- Imitá el ruido real, no el phishing "de manual": la mayoría de los hosts \
+  reales son cortos y sucios, sin guiones (57%) y sin palabras gancho (96%); \
+  abundan los nombres inventados o gibberish (cesuho, lapsod), los números \
+  pegados (web76109, galiciaar22), el typosquatting y los dominios comprometidos \
+  de negocios ajenos. No armes nombres descriptivos tipo marca-verificar-cuenta.
+- Cada fila del plan trae un perfil tomado de un host real: largo total del \
+  hostname (±3 caracteres), cantidad exacta de guiones, cantidad aproximada de \
+  dígitos y si lleva palabra gancho (soporte, verificar, actualizar, envios, \
+  reembolso...). Respetalo: es lo que hace al lote indistinguible del corpus.
 - Respetá exactamente la forma, la marca y el sufijo o la plataforma de cada fila del plan.
 
 Definición de formas (el sufijo es la parte final que se registra: com, com.br, com.uy, top...):
@@ -201,16 +215,17 @@ def prompt_usuario(plan: list[dict], ejs: list[str], cal: dict, ya_generados: li
     lineas += [
         f"Generá exactamente {len(plan)} hostnames siguiendo este plan (una fila = un host, mismo id):",
         "",
-        "| id | forma | marca | sufijo / plataforma |",
-        "|----|-------|-------|---------------------|",
+        "| id | forma | marca | sufijo / plataforma | largo | guiones | dígitos | gancho |",
+        "|----|-------|-------|---------------------|-------|---------|---------|--------|",
     ]
     for f in plan:
         destino = f.get("plataforma") or "." + f["sufijo"]
-        lineas.append(f"| {f['id']} | {f['forma']} | {f['marca']} | {destino} |")
+        lineas.append(f"| {f['id']} | {f['forma']} | {f['marca']} | {destino} "
+                      f"| {f['largo']} | {f['guiones']} | {f['digitos']} | {f['gancho']} |")
     lineas += [
         "",
         "Cuando la marca sea 'ninguna', generá un host de phishing sin marca reconocible "
-        "(gibberish, palabras gancho o nombre de negocio genérico).",
+        "(gibberish o nombre de negocio genérico; palabra gancho solo si la fila lo pide).",
     ]
     return "\n".join(lineas)
 

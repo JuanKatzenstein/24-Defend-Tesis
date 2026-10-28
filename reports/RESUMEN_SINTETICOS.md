@@ -70,6 +70,147 @@ de ejemplos, sino en la información que contiene el nombre: los errores que que
 cuyo nombre no se diferencia del de un sitio legítimo, y ningún dato sintético de la clase phishing puede
 resolver esa ambigüedad sin aumentar los falsos positivos.
 
+## Detalle técnico de lo que se hizo
+
+Todo el trabajo con sintéticos está en cuatro scripts de Python dentro de `tools/`. Las cinco versiones
+(v1 a v5) **no son cinco programas distintos**: son el mismo generador, `generar_sinteticos.py`, que se
+fue modificando entre corridas. Cada versión quedó guardada como un commit del repositorio, junto con
+su CSV de salida y su reporte, así que cualquiera puede reproducirla.
+
+| Script | Para qué sirve |
+|---|---|
+| `generar_sinteticos.py` | Arma el pedido, llama a la API de Claude, valida la respuesta y guarda los hosts sintéticos en un CSV. |
+| `evaluar_sinteticos.py` | Aplica los cinco controles de calidad (integridad, fidelidad, diversidad, firma y utilidad) y escribe el reporte. |
+| `moldes_dificiles.py` | Encuentra los phishing de entrenamiento que el detector no detecta (los usan v4 y v5). |
+| `test_generar_sinteticos.py` | Prueba de punta a punta del generador sin gastar API: simula el servidor de Claude en la propia máquina. |
+
+### Cómo funciona el generador, paso a paso
+
+Cada corrida pide *N* lotes de 25 hostnames. Cada lote recorre los mismos cinco pasos:
+
+1. **Carga y calibración** (`cargar`, `forma_de`, `calibracion`). Se lee el CSV combinado y se toman
+   **solo los phishing del split de entrenamiento**, para que el generador nunca vea ejemplos del test.
+   `forma_de` clasifica cada host en una de tres formas: *apex* (dominio propio sin subdominios, como
+   `itaucardigital.com`), *sub_ajeno* (subdominio sobre un dominio ajeno a la marca, como
+   `americanas.divulgapromo.ml`) o *plataforma* (subdominio de un hosting gratuito, como
+   `netflix-cop.vercel.app`). `calibracion` calcula las proporciones reales del corpus: qué porcentaje
+   hay de cada forma, de cada sufijo (`.com`, `.com.br`...), de cada plataforma y de cada marca, y los
+   percentiles de largo del hostname.
+2. **Plan del lote** (`plan_lote`). Antes de llamar al modelo, el script decide qué tiene que tener
+   cada uno de los 25 hosts (forma, marca, sufijo o plataforma), muestreando al azar con las
+   proporciones del corpus. El modelo no decide la distribución: la decide el plan. Así el lote
+   sintético respeta las mismas proporciones que el phishing real.
+3. **Armado del prompt** (`SYSTEM`, `prompt_usuario`, `ejemplos`). El pedido tiene dos partes:
+   - El **mensaje de sistema** fija el contexto (investigación defensiva, los hosts solo se usan para
+     entrenar un clasificador y nunca se registran), las reglas de formato y la definición de las formas.
+   - El **mensaje de usuario** incluye unos 18 ejemplos reales (6 por forma, rotados en cada lote), los
+     percentiles de largo, los últimos 60 hosts ya generados (para que no se repita entre lotes) y el
+     plan como una tabla, una fila por host.
+4. **Llamada a la API** (`llamar`). Se usa el SDK oficial `anthropic` con **salida estructurada**: el
+   modelo tiene que devolver un JSON que cumpla un esquema definido con Pydantic (`HostSintetico`,
+   `Lote`), con los campos id, hostname, forma, marca y patrón. Eso evita tener que interpretar texto
+   libre. Además:
+   - el mensaje de sistema se guarda en caché, porque es igual en todos los lotes, y así se abaratan las
+     llamadas;
+   - no se usa *temperature*, porque el modelo pedido no la admite: la variedad sale del plan, de los
+     ejemplos rotados y de la lista de hosts ya generados;
+   - está activado el **fallback del servidor**: si el filtro de seguridad del modelo pedido
+     (`claude-opus-5-5`) rechaza el pedido, la API lo reintenta con un modelo de respaldo
+     (`claude-opus-4-8`). Fue lo que pasó en todos los lotes, y queda registrado en cada fila
+     (`modelo_servido`).
+5. **Validación** (`validar`, `motivo_rechazo`). Cada host devuelto se revisa contra su fila del plan y
+   se descarta si:
+   - no es un hostname válido (expresión regular `RE_HOST`);
+   - ya existe en el dataset o ya fue generado (*duplicado*);
+   - es una casi-copia: `esqueleto` quita dígitos y guiones, así `americanas-loja34` y
+     `americanas-loja35` cuentan como el mismo host;
+   - su largo cae fuera del rango real (percentiles 1 a 99);
+   - no respeta el plan: `forma_host` y `dominio_registrado` recalculan la forma y el sufijo del host
+     generado con la misma regla que se usó para el corpus, y tienen que coincidir con los de la fila.
+
+Los hosts aceptados se guardan con sus metadatos (`fuente = sintetico_llm`, `split = train`, número de
+lote, modelo pedido y servido, *effort*). Cada corrida escribe además un JSON de trazabilidad con la
+configuración exacta (incluido un hash del prompt de sistema), cuántos hosts se pidieron, cuántos se
+aceptaron y los motivos de descarte. Si el CSV de salida ya existe, el script continúa desde el último
+lote sin repetir planes.
+
+### Qué cambió en cada versión
+
+**v1, plan por marginales.** Es el generador tal como se describió arriba. Cada atributo del plan se
+sortea por separado con `muestrear` (forma, marca y sufijo, cada uno según su frecuencia en el corpus).
+Problema: el plan solo controla forma, marca y sufijo; todo lo demás (largo, guiones, vocabulario) lo
+decide el modelo, y el modelo tiende a un phishing "de manual", largo y descriptivo, como
+`soporte-verificar-cuenta-itau.com`.
+
+**v2, perfil real por fila.** `calibracion` guarda además, para cada forma, la lista de **perfiles
+reales**: el largo, la cantidad de guiones, la cantidad de dígitos y si lleva palabra gancho de cada
+host de entrenamiento. `plan_lote` copia un perfil al azar a cada fila, y la tabla del prompt suma las
+columnas *largo, guiones, dígitos, gancho*. También se reescribió una regla del mensaje de sistema que,
+sin querer, empujaba al modelo a usar palabras gancho. Resultado: el largo y los guiones quedaron como
+los reales, pero el **vocabulario** seguía delatando al generador.
+
+**v3, molde real por fila.** Es el cambio más importante. Se agregaron tres funciones:
+- `moldes`: convierte cada phishing real de entrenamiento en un "molde" (1094 de 1114 sirven; se
+  descartan los que la validación no clasificaría igual que el CSV). De cada molde salen **todos** los
+  atributos de la fila: forma, marca, sufijo o plataforma, perfil y, en *sub_ajeno*, el mismo dominio
+  base. Con esto el plan reproduce la distribución **conjunta** del corpus, no solo cada atributo por
+  separado. Por ejemplo, si en el corpus Magalu aparece sobre todo en *apex* con `.com`, así aparece en el plan.
+- `plan_lote`: ahora elige 25 moldes distintos al azar (`rng.sample`) y el prompt muestra el molde en la
+  tabla. Se le pide al modelo un host "hermano" del molde: misma construcción (concatenado, gibberish,
+  typosquatting, DNS dinámico...) pero con otro nombre.
+- `tokens` y `sobreusadas`: parten cada host en palabras y comparan la frecuencia de cada palabra en lo
+  ya generado con su frecuencia en el phishing real. Las palabras que el generador usa al menos 3 veces
+  más que el corpus (por ejemplo *acesso*, *reembolso*, *cliente*) se listan en el prompt como
+  palabras a evitar. Esa lista se recalcula en cada lote.
+
+La validación suma dos reglas: en *sub_ajeno* el dominio registrado tiene que ser exactamente el del
+molde, y el host no puede ser el molde con otros dígitos o guiones (*copia_del_molde*).
+
+**v4, generación dirigida a los errores.** Se agregó el script `moldes_dificiles.py`, que hace una
+**validación cruzada de 5 folds** sobre el entrenamiento, usando los folds que ya trae el CSV. En cada
+fold entrena el detector (Random Forest de 300 árboles sobre las 20 features léxicas) con los otros
+cuatro y predice el fold que dejó afuera. Así cada host recibe una probabilidad de phishing de un modelo
+que nunca lo vio (predicción *out-of-fold*). Los phishing con probabilidad menor a 0.5 son los
+**falsos negativos**: 217 de 1114. El generador recibe esa lista con la opción `--moldes` y solo usa esos
+hosts como moldes. Como el pool es chico, `plan_lote` permite repetir un molde entre lotes.
+
+**v5, dirigida y con marca.** Igual que v4, pero `moldes_dificiles.py --solo-con-marca` se queda solo con
+los 89 falsos negativos que imitan una marca, que son los que tienen alguna señal léxica que aprender
+(por ejemplo `magalulu.com`), y descarta los que no tienen ninguna pista en el nombre (por ejemplo
+`skylark.ch`).
+
+### Cómo funciona el evaluador
+
+`evaluar_sinteticos.py` recalcula las features de **todos** los hosts (reales y sintéticos) con la misma
+función, `extract_features` de `src/features.py`, para que ambos grupos pasen por el mismo pipeline.
+
+| Control | Función | Cómo se mide |
+|---|---|---|
+| Integridad | `integridad` | Cuenta hosts inválidos, duplicados, ya presentes en el dataset y casi-copias. Para detectar **fuga hacia el test** busca, para cada sintético, el host de valid/test más parecido (vecino más cercano con similitud coseno sobre n-gramas de 2 a 4 caracteres) y cuenta cuántos están a distancia de edición (Levenshtein) de 1 o menos. |
+| Fidelidad | `fidelidad` | Para cada una de las 20 features compara la distribución sintética con la real mediante el estadístico **Kolmogorov-Smirnov** (KS: la mayor distancia entre las dos curvas acumuladas; 0 = idénticas). Se reporta la mediana de los 20 valores. |
+| Diversidad | `diversidad` | Similitud coseno de n-gramas de cada sintético con su vecino más cercano, dentro del lote y contra el phishing real. Arriba de 0.9 cuenta como casi-duplicado interno o como "memorización" de un host real. |
+| Firma | `firma` | Arma un dataset balanceado, mitad sintéticos y mitad phishing real, y entrena dos clasificadores para distinguirlos: regresión logística sobre n-gramas de 1 a 4 caracteres y Random Forest sobre las 20 features. El AUC se mide con validación cruzada de 5 folds. También lista los n-gramas que más delatan al sintético. |
+| Utilidad | `utilidad`, `utilidad_ngramas` | Entrena el detector cuatro veces, con 5 semillas cada una, y lo mide en el **test real**: A solo real; B real + phishing real repetido (sobremuestreo) en la misma cantidad que los sintéticos; C real + sintéticos; D real + moldes difíciles repetidos (solo en v4 y v5). Se hace con dos detectores: Random Forest sobre features (300 árboles, clases balanceadas) y regresión logística sobre TF-IDF de n-gramas de 1 a 4 caracteres. |
+
+Los controles B y D son clave para la interpretación: sin ellos no se podría saber si una mejora viene
+de la información nueva que aportan los sintéticos o simplemente de tener más ejemplos de la clase
+phishing. `veredicto` resume todo en la tabla OK / REVISAR / FALLA con umbrales fijos: KS mediano ≤ 0.15,
+firma ≤ 0.75 (FALLA si > 0.9), y ≤ 5% de casi-duplicados y de memorización.
+
+### Cómo se probó el generador sin gastar API
+
+`test_generar_sinteticos.py` levanta un servidor HTTP local que imita la API de Claude. El servidor lee
+el plan desde el prompt, devuelve un host por fila y mete errores a propósito: una forma cambiada, un
+hostname inválido y una copia de un lote anterior. Después corre el generador real contra ese servidor
+y verifica 14 puntos:
+- que el pedido use el modelo, el *effort*, la salida estructurada, el caché y el fallback correctos;
+- que la validación descarte exactamente los errores introducidos;
+- que al reanudar no se repitan planes;
+- que el lote siguiente vea los hosts ya generados;
+- que se escriba el reporte de trazabilidad.
+
+El test se corrió después de cada cambio del generador.
+
 ## Problemas que generan los sintéticos (resumen)
 
 1. **Firma del generador**: sin calibración, el LLM produce un estilo propio, reconocible (AUC 0.98).

@@ -42,10 +42,13 @@ se generan hostname + metadatos (fuente = "sintetico_llm").
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 import random
 import re
 import sys
 from collections import Counter
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List
 
@@ -254,6 +257,14 @@ def dominio_registrado(host: str, cal: dict) -> tuple[str, str]:
     return ".".join(labels[-(n + 1):]), sufijo
 
 
+def forma_host(host: str, cal: dict) -> str:
+    """Forma de un host con la misma regla que forma_de() aplica al CSV."""
+    if any(host.endswith("." + p) for p in cal["plataformas"]):
+        return "plataforma"
+    registrado, _ = dominio_registrado(host, cal)
+    return "apex" if registrado == host else "sub_ajeno"
+
+
 def motivo_rechazo(h: HostSintetico, fila: dict | None, cal: dict,
                    vistos: set[str], esqueletos: set[str]) -> str | None:
     host = h.hostname
@@ -268,18 +279,12 @@ def motivo_rechazo(h: HostSintetico, fila: dict | None, cal: dict,
         return "largo_fuera_de_rango"
     if fila is None or h.forma != fila["forma"]:
         return "no_respeta_plan"
-    plataforma = next((p for p in cal["plataformas"] if host.endswith("." + p)), None)
+    if forma_host(host, cal) != fila["forma"]:
+        return "no_respeta_plan"
     if fila["forma"] == "plataforma":
-        return None if plataforma == fila["plataforma"] else "no_respeta_plan"
-    if plataforma:
-        return "no_respeta_plan"
-    registrado, sufijo = dominio_registrado(host, cal)
-    if sufijo != fila["sufijo"]:
-        return "no_respeta_plan"
-    es_apex = registrado == host
-    if es_apex != (fila["forma"] == "apex"):
-        return "no_respeta_plan"
-    return None
+        return None if host.endswith("." + fila["plataforma"]) else "no_respeta_plan"
+    _, sufijo = dominio_registrado(host, cal)
+    return None if sufijo == fila["sufijo"] else "no_respeta_plan"
 
 
 def validar(lote: Lote, plan: list[dict], cal: dict,
@@ -322,7 +327,6 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="imprime el prompt del primer lote y sale")
     args = ap.parse_args()
 
-    rng = random.Random(args.seed)
     df, phish = cargar(args.csv)
     cal = calibracion(df, phish)
     vistos = set(df.hostname)
@@ -336,6 +340,12 @@ def main():
         lote_ini = int(previos.lote.max()) + 1
     else:
         previos, ya_generados, lote_ini = None, [], 1
+    # Semilla distinta por corrida: al reanudar no se repiten los planes de lotes ya hechos.
+    rng = random.Random(f"{args.seed}-{lote_ini}")
+    config = {"modelo": args.modelo, "effort": args.effort, "por_lote": args.por_lote,
+              "ejemplos_por_forma": args.ejemplos_por_forma, "seed": args.seed,
+              "system_prompt_sha": hashlib.sha256(SYSTEM.encode()).hexdigest()[:12]}
+    config_hash = hashlib.sha256(json.dumps(config, sort_keys=True).encode()).hexdigest()[:16]
 
     if args.dry_run:
         plan = plan_lote(cal, args.por_lote, rng)
@@ -348,7 +358,7 @@ def main():
     import anthropic
     client = anthropic.Anthropic(max_retries=4)  # reintenta 429/5xx con backoff
 
-    filas = []
+    filas, descartes, errores = [], Counter(), 0
     for n_lote in range(lote_ini, lote_ini + args.n_lotes):
         plan = plan_lote(cal, args.por_lote, rng)
         prompt = prompt_usuario(plan, ejemplos(phish, args.ejemplos_por_forma, rng), cal,
@@ -357,14 +367,18 @@ def main():
             lote, modelo_servido, hubo_fallback = llamar(client, args, prompt)
         except (anthropic.APIError, RuntimeError) as e:
             print(f"[lote {n_lote}] error: {e}", file=sys.stderr)
+            errores += 1
             continue
         ok, motivos = validar(lote, plan, cal, vistos, esqueletos)
+        descartes += motivos
         aviso = f"  (fallback a {modelo_servido})" if hubo_fallback else ""
         print(f"[lote {n_lote}] {len(ok)}/{len(plan)} válidos  descartes={dict(motivos)}{aviso}")
         ya_generados += [h.hostname for h in ok]
+        # Cada sintético es su propio grupo: no comparte origen con ningún host real.
         filas += [{**h.model_dump(exclude={"id"}), "phishing": 1, "fuente": "sintetico_llm",
-                   "lote": n_lote, "modelo_pedido": args.modelo, "modelo_servido": modelo_servido,
-                   "effort": args.effort} for h in ok]
+                   "split": "train", "grupo_split": h.hostname, "lote": n_lote,
+                   "modelo_pedido": args.modelo, "modelo_servido": modelo_servido,
+                   "effort": args.effort, "config_hash": config_hash} for h in ok]
 
     if not filas:
         sys.exit("No se generó ningún host válido.")
@@ -374,6 +388,15 @@ def main():
     nuevo.to_csv(args.out, index=False)
     print(f"Guardado: {args.out} ({len(nuevo)} hosts en total)")
     resumen(nuevo, phish, cal)
+
+    reporte = {"fecha_utc": datetime.now(timezone.utc).isoformat(), "config": config,
+               "config_hash": config_hash, "lotes": [lote_ini, lote_ini + args.n_lotes - 1],
+               "pedidos": args.n_lotes * args.por_lote, "aceptados": len(filas),
+               "lotes_con_error": errores, "descartes": dict(descartes),
+               "modelos_servidos": pd.Series([f["modelo_servido"] for f in filas]).value_counts().to_dict()}
+    ruta = args.out.with_name(args.out.stem + f".reporte_lotes_{lote_ini:03d}.json")
+    ruta.write_text(json.dumps(reporte, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Reporte de la corrida: {ruta}")
 
 
 if __name__ == "__main__":

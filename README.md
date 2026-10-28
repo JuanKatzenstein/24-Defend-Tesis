@@ -55,6 +55,24 @@ python3 curvas_eval.py    --data ../data/processed/dataset_real_host.csv --outdi
 Resultado: **ROC-AUC ~0.97, F1 ~0.90** (OpenPhish vs Tranco), robusto a la ablación.
 Ver **`reports/RESULTADOS.md`** para el resumen completo.
 
+### Phishing sintético (opcional, solo para train)
+
+```bash
+cd tools
+python3 generar_sinteticos.py --csv ../data/raw/dataset_combinado_v4.csv --dry-run      # ver el prompt
+python3 test_generar_sinteticos.py --csv ../data/raw/dataset_combinado_v4.csv          # test sin API
+python3 generar_sinteticos.py --csv ../data/raw/dataset_combinado_v4.csv \
+    --n-lotes 4 --por-lote 25 --out ../data/raw/phishing_sintetico_llm.csv               # requiere ANTHROPIC_API_KEY
+python3 evaluar_sinteticos.py --csv ../data/raw/dataset_combinado_v4.csv \
+    --sint ../data/raw/phishing_sintetico_llm.csv --report ../reports/eval_sinteticos.md
+```
+
+`evaluar_sinteticos.py` decide si un lote sirve: integridad (sin fuga a valid/test),
+fidelidad de features (KS), diversidad, firma (¿un clasificador separa sintético de
+real?) y utilidad (PR-AUC en test real vs. solo real y vs. sobremuestreo). Los
+sintéticos nunca van a validación ni test. Ver `reports/eval_sinteticos_piloto_mutacion.md`
+para un ejemplo de lote que **no** pasa.
+
 ### Reportes
 
 - `reports/RESULTADOS.md` — **resumen principal** (sintético + datos reales).

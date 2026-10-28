@@ -1,0 +1,246 @@
+hostname,forma,marca,patron,phishing,fuente,split,grupo_split,lote,modelo_pedido,modelo_servido,effort,config_hash
+magalu.ofertasrelampago-br.com,sub_ajeno,magalu,marca+palabra gancho,1,sintetico_llm,train,magalu.ofertasrelampago-br.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+verificar-conta-acesso.000webhostapp.com,plataforma,ninguna,palabra gancho,1,sintetico_llm,train,verificar-conta-acesso.000webhostapp.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadolibre-seguridad-login.000webhostapp.com,plataforma,mercadolibre,marca+login,1,sintetico_llm,train,mercadolibre-seguridad-login.000webhostapp.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.promo-black-desc.com,sub_ajeno,americanas,marca+promo,1,sintetico_llm,train,americanas.promo-black-desc.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bancoestado-actualizar.vip,apex,bancoestado,marca+verbo,1,sintetico_llm,train,bancoestado-actualizar.vip,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+soporte-cliente-online.joomla.com,plataforma,ninguna,palabra gancho,1,sintetico_llm,train,soporte-cliente-online.joomla.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadopago.pagos-seguros-mx.com,sub_ajeno,mercadopago,marca+pagos,1,sintetico_llm,train,mercadopago.pagos-seguros-mx.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-reembolso22.ml,apex,magalu,marca+reembolso,1,sintetico_llm,train,magalu-reembolso22.ml,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+central-verificacion-usuario.online,apex,ninguna,palabra gancho,1,sintetico_llm,train,central-verificacion-usuario.online,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bancoestado-claveweb.com,apex,bancoestado,marca+clave,1,sintetico_llm,train,bancoestado-claveweb.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.kjxweb3291.com,sub_ajeno,americanas,marca+gibberish,1,sintetico_llm,train,americanas.kjxweb3291.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.atendimento-cliente7.com,sub_ajeno,itau,marca+atendimento,1,sintetico_llm,train,itau.atendimento-cliente7.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+envios-rastreo.tracknow-ck.com,sub_ajeno,ninguna,logistica gancho,1,sintetico_llm,train,envios-rastreo.tracknow-ck.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+actualizacion-datos-urgente.com,apex,ninguna,palabra gancho,1,sintetico_llm,train,actualizacion-datos-urgente.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+login-verificar-acesso.pages.dev,plataforma,ninguna,login gancho,1,sintetico_llm,train,login-verificar-acesso.pages.dev,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-descontos.net,apex,americanas,marca+descuento,1,sintetico_llm,train,americanas-descontos.net,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+reembolso.pagoonline-qz.net,sub_ajeno,ninguna,reembolso gancho,1,sintetico_llm,train,reembolso.pagoonline-qz.net,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+soporte-pagos-seguro.de,apex,ninguna,soporte gancho,1,sintetico_llm,train,soporte-pagos-seguro.de,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bradesco-seguranca-net.com,apex,bradesco,marca+seguranca,1,sintetico_llm,train,bradesco-seguranca-net.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+gov-tramites-online.pages.dev,plataforma,ninguna,gobierno gancho,1,sintetico_llm,train,gov-tramites-online.pages.dev,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+prex-acceso-cuenta.joomla.com,plataforma,prex,marca+acceso,1,sintetico_llm,train,prex-acceso-cuenta.joomla.com,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+atualizar.minhaconta-br4.cf,sub_ajeno,ninguna,palabra gancho,1,sintetico_llm,train,atualizar.minhaconta-br4.cf,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+confirmar-entrega-paquete.de,apex,ninguna,logistica gancho,1,sintetico_llm,train,confirmar-entrega-paquete.de,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+suporte.recarga-celular9.com.br,sub_ajeno,ninguna,recarga gancho,1,sintetico_llm,train,suporte.recarga-celular9.com.br,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+zpqra83-verifica.pages.dev,plataforma,ninguna,gibberish+verifica,1,sintetico_llm,train,zpqra83-verifica.pages.dev,1,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.seguranca-acesso-cliente.cc,sub_ajeno,itau,marca+palabra gancho,1,sintetico_llm,train,itau.seguranca-acesso-cliente.cc,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-ofertas-relampago.tk,apex,americanas,marca+palabra gancho,1,sintetico_llm,train,americanas-ofertas-relampago.tk,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+verificacao.central-usuario-br.com,sub_ajeno,ninguna,gancho verificacion,1,sintetico_llm,train,verificacao.central-usuario-br.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+login.minha-conta-segura77.com,sub_ajeno,ninguna,login subdominio,1,sintetico_llm,train,login.minha-conta-segura77.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bradesco-atualizar-cadastro.gq,apex,bradesco,marca+actualizar,1,sintetico_llm,train,bradesco-atualizar-cadastro.gq,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-super-descontos.online,apex,magalu,marca+descuento,1,sintetico_llm,train,magalu-super-descontos.online,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+recarga-celular-promo.blogspot.com,plataforma,ninguna,gancho recarga,1,sintetico_llm,train,recarga-celular-promo.blogspot.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.pagamento-pix-br.com,sub_ajeno,americanas,marca+pix,1,sintetico_llm,train,americanas.pagamento-pix-br.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.atendimento-online5.com.br,sub_ajeno,itau,marca+atencion,1,sintetico_llm,train,itau.atendimento-online5.com.br,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau-token-seguro.net,apex,itau,marca+token,1,sintetico_llm,train,itau-token-seguro.net,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+confirmar-pago-pendiente.com,apex,ninguna,gancho pago,1,sintetico_llm,train,confirmar-pago-pendiente.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+kqwx83nz.rastreo-envios-cl.com,sub_ajeno,ninguna,gibberish envios,1,sintetico_llm,train,kqwx83nz.rastreo-envios-cl.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+reembolso-rapido-online.com,apex,ninguna,gancho reembolso,1,sintetico_llm,train,reembolso-rapido-online.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+acceso-cuenta-verificada.pages.dev,plataforma,ninguna,gancho acceso,1,sintetico_llm,train,acceso-cuenta-verificada.pages.dev,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+soporte-tramites.duckdns.org,plataforma,ninguna,gancho soporte,1,sintetico_llm,train,soporte-tramites.duckdns.org,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+seguro.atualizacao-dados-br2.com,sub_ajeno,ninguna,actualizar datos,1,sintetico_llm,train,seguro.atualizacao-dados-br2.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+htq7za-login-verifica.pages.dev,plataforma,ninguna,gibberish login,1,sintetico_llm,train,htq7za-login-verifica.pages.dev,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+sucive.pago-patente-online.com,sub_ajeno,sucive,marca+pago,1,sintetico_llm,train,sucive.pago-patente-online.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+entrega.paquete-pendiente9.site,sub_ajeno,ninguna,gancho entrega,1,sintetico_llm,train,entrega.paquete-pendiente9.site,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-black-pay.vercel.app,plataforma,americanas,marca+pay plataforma,1,sintetico_llm,train,americanas-black-pay.vercel.app,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+actualizar-metodo-pago.com,apex,ninguna,actualizar pago,1,sintetico_llm,train,actualizar-metodo-pago.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+premio-sorteo-ganador2025.com,apex,ninguna,gancho premio,1,sintetico_llm,train,premio-sorteo-ganador2025.com,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+ov82kr-suporte-cliente.pages.dev,plataforma,ninguna,gibberish soporte,1,sintetico_llm,train,ov82kr-suporte-cliente.pages.dev,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+nota-fiscal-pendente.com.br,apex,ninguna,gancho factura,1,sintetico_llm,train,nota-fiscal-pendente.com.br,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-vendas-oficial.com.br,apex,americanas,marca+ventas,1,sintetico_llm,train,americanas-vendas-oficial.com.br,2,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+central-atendimento-cliente.com.br,apex,ninguna,palabra gancho,1,sintetico_llm,train,central-atendimento-cliente.com.br,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-promocao-relampago.pages.dev,plataforma,magalu,marca+gancho en plataforma,1,sintetico_llm,train,magalu-promocao-relampago.pages.dev,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+verificacao.seguranca-portal8.com,sub_ajeno,ninguna,sub gancho,1,sintetico_llm,train,verificacao.seguranca-portal8.com,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+fk29zx-confirma-acesso.pages.dev,plataforma,ninguna,gibberish+gancho,1,sintetico_llm,train,fk29zx-confirma-acesso.pages.dev,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+nubank-app-seguro.pages.dev,plataforma,nubank,marca+gancho plataforma,1,sintetico_llm,train,nubank-app-seguro.pages.dev,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+reembolso-pendente-online.com,apex,ninguna,gancho reembolso,1,sintetico_llm,train,reembolso-pendente-online.com,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadolibre-ofertas-cl.org,apex,mercadolibre,marca+oferta,1,sintetico_llm,train,mercadolibre-ofertas-cl.org,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadopago.pagamentos-pix7.net,sub_ajeno,mercadopago,marca sub+pix,1,sintetico_llm,train,mercadopago.pagamentos-pix7.net,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau-token-acesso.com,apex,itau,marca+token,1,sintetico_llm,train,itau-token-acesso.com,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+acceso.usuario-verificado3.tk,sub_ajeno,ninguna,sub gancho,1,sintetico_llm,train,acceso.usuario-verificado3.tk,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+prex-acceso-seguro.pantheonsite.io,plataforma,prex,marca plataforma,1,sintetico_llm,train,prex-acceso-seguro.pantheonsite.io,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-descontos-vip.duckdns.org,plataforma,americanas,marca+desconto plataforma,1,sintetico_llm,train,americanas-descontos-vip.duckdns.org,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+qwz73na-login-verifica.pages.dev,plataforma,ninguna,gibberish login,1,sintetico_llm,train,qwz73na-login-verifica.pages.dev,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.seguranca-digital-br.click,sub_ajeno,itau,marca sub,1,sintetico_llm,train,itau.seguranca-digital-br.click,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+suporte.nota-fiscal-online4.com.br,sub_ajeno,ninguna,sub nota fiscal,1,sintetico_llm,train,suporte.nota-fiscal-online4.com.br,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu.minhas-compras-br2.com,sub_ajeno,magalu,marca sub,1,sintetico_llm,train,magalu.minhas-compras-br2.com,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+entrega-paquete-rastreo.pages.dev,plataforma,ninguna,gancho envios,1,sintetico_llm,train,entrega-paquete-rastreo.pages.dev,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+confirmar.pago-pendiente-mx9.com,sub_ajeno,ninguna,sub pago,1,sintetico_llm,train,confirmar.pago-pendiente-mx9.com,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+actualizar-datos-fiscales.com,apex,ninguna,gancho actualizar,1,sintetico_llm,train,actualizar-datos-fiscales.com,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadolibre.compras-seguras-ar.net,sub_ajeno,mercadolibre,marca sub,1,sintetico_llm,train,mercadolibre.compras-seguras-ar.net,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-black-ofertas.de,apex,americanas,marca+black,1,sintetico_llm,train,americanas-black-ofertas.de,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+hwp82kr-suporte-online.pages.dev,plataforma,ninguna,gibberish soporte,1,sintetico_llm,train,hwp82kr-suporte-online.pages.dev,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.central-token-cliente.com.br,sub_ajeno,itau,marca sub token,1,sintetico_llm,train,itau.central-token-cliente.com.br,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+recarga.celular-promo-br5.com,sub_ajeno,ninguna,sub recarga,1,sintetico_llm,train,recarga.celular-promo-br5.com,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bancoestado-claveweb-cl.pages.dev,plataforma,bancoestado,marca+clave plataforma,1,sintetico_llm,train,bancoestado-claveweb-cl.pages.dev,3,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+verificar.pagos-online-seguro.shop,sub_ajeno,ninguna,gancho+subdominio,1,sintetico_llm,train,verificar.pagos-online-seguro.shop,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.ofertas-blackweek-br.com,sub_ajeno,americanas,marca+subdominio ajeno,1,sintetico_llm,train,americanas.ofertas-blackweek-br.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.acesso-token-cliente9.com.br,sub_ajeno,itau,marca+subdominio ajeno,1,sintetico_llm,train,itau.acesso-token-cliente9.com.br,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-promo-relampago-br.pages.dev,plataforma,magalu,marca+gancho plataforma,1,sintetico_llm,train,magalu-promo-relampago-br.pages.dev,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-descontao.app,apex,americanas,marca+palabra gancho,1,sintetico_llm,train,americanas-descontao.app,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+caixa-atualizar-conta.com,apex,caixa,marca+gancho,1,sintetico_llm,train,caixa-atualizar-conta.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+central-reembolso-rapido.net,apex,ninguna,palabras gancho,1,sintetico_llm,train,central-reembolso-rapido.net,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bancoestado-claveweb-cl.black,apex,bancoestado,marca+gancho,1,sintetico_llm,train,bancoestado-claveweb-cl.black,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-super-promo.000webhostapp.com,plataforma,magalu,marca+gancho hosting,1,sintetico_llm,train,magalu-super-promo.000webhostapp.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-pagamento-pix.com,apex,magalu,marca+gancho,1,sintetico_llm,train,magalu-pagamento-pix.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+jk82zqn-verifica-acesso.pages.dev,plataforma,ninguna,gibberish+gancho,1,sintetico_llm,train,jk82zqn-verifica-acesso.pages.dev,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalus-ofertas-vip.black,apex,magalu,typo marca+gancho,1,sintetico_llm,train,magalus-ofertas-vip.black,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadolibre-ofertas-ar.cc,apex,mercadolibre,marca+gancho,1,sintetico_llm,train,mercadolibre-ofertas-ar.cc,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+confirmar-entrega-paquete7.com,apex,ninguna,palabras gancho,1,sintetico_llm,train,confirmar-entrega-paquete7.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-minhas-compras.com,apex,magalu,marca+gancho,1,sintetico_llm,train,magalu-minhas-compras.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bradesco-seguranca-net.repl.co,plataforma,bradesco,marca+gancho hosting,1,sintetico_llm,train,bradesco-seguranca-net.repl.co,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu.descontos-oficial-br3.com,sub_ajeno,magalu,marca+subdominio ajeno,1,sintetico_llm,train,magalu.descontos-oficial-br3.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.central-vendas-br.com,sub_ajeno,americanas,marca+subdominio ajeno,1,sintetico_llm,train,americanas.central-vendas-br.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-blackfriday-pay.pages.dev,plataforma,americanas,marca+gancho plataforma,1,sintetico_llm,train,americanas-blackfriday-pay.pages.dev,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.seguranca-cliente-digital.com,sub_ajeno,itau,marca+subdominio ajeno,1,sintetico_llm,train,itau.seguranca-cliente-digital.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+sicredi.atualizar-dados-conta.com,sub_ajeno,sicredi,marca+subdominio ajeno,1,sintetico_llm,train,sicredi.atualizar-dados-conta.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+nota-fiscal-pendente-online.com,apex,ninguna,palabras gancho,1,sintetico_llm,train,nota-fiscal-pendente-online.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-promo-vip.gq,apex,americanas,marca+gancho,1,sintetico_llm,train,americanas-promo-vip.gq,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+prex-acceso-seguro-uy.firebaseapp.com,plataforma,prex,marca+gancho hosting,1,sintetico_llm,train,prex-acceso-seguro-uy.firebaseapp.com,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bradesco-token-acesso.top,apex,bradesco,marca+gancho,1,sintetico_llm,train,bradesco-token-acesso.top,4,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-ofertas-vip.joomla.com,plataforma,americanas,marca+gancho en plataforma,1,sintetico_llm,train,americanas-ofertas-vip.joomla.com,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-blackweek.cc,apex,americanas,marca+evento,1,sintetico_llm,train,americanas-blackweek.cc,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bbva-acceso-seguro.com,apex,bbva,marca+gancho,1,sintetico_llm,train,bbva-acceso-seguro.com,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.verificacao-cliente-br.com,sub_ajeno,itau,marca sub+gancho,1,sintetico_llm,train,itau.verificacao-cliente-br.com,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+soporte.cuenta-verificada8.com,sub_ajeno,ninguna,gancho sin marca,1,sintetico_llm,train,soporte.cuenta-verificada8.com,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+acceso.portal-seguro-online.tk,sub_ajeno,ninguna,gancho sin marca,1,sintetico_llm,train,acceso.portal-seguro-online.tk,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.compras-oficial-br4.com.br,sub_ajeno,americanas,marca sub+gancho,1,sintetico_llm,train,americanas.compras-oficial-br4.com.br,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+pagos-seguros-cliente.pantheonsite.io,plataforma,ninguna,gancho en plataforma,1,sintetico_llm,train,pagos-seguros-cliente.pantheonsite.io,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.token-digital-acesso7.com,sub_ajeno,itau,marca sub+gancho,1,sintetico_llm,train,itau.token-digital-acesso7.com,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.vendas-relampago-br.org,sub_ajeno,americanas,marca sub+gancho,1,sintetico_llm,train,americanas.vendas-relampago-br.org,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.central-seguranca-cliente.de,sub_ajeno,itau,marca sub+gancho,1,sintetico_llm,train,itau.central-seguranca-cliente.de,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.nota-fiscal-pendente.com.br,sub_ajeno,americanas,marca sub+gancho,1,sintetico_llm,train,americanas.nota-fiscal-pendente.com.br,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+serasa.consulta-cpf-online3.com,sub_ajeno,serasa,marca sub+gancho,1,sintetico_llm,train,serasa.consulta-cpf-online3.com,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.ofertas-blackpay-br.com,sub_ajeno,americanas,marca sub+evento,1,sintetico_llm,train,americanas.ofertas-blackpay-br.com,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-promo-vendas.pages.dev,plataforma,americanas,marca+gancho plataforma,1,sintetico_llm,train,americanas-promo-vendas.pages.dev,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau-clientes-seguro.net,apex,itau,marca+gancho,1,sintetico_llm,train,itau-clientes-seguro.net,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+caixa.atualizar-cadastro-br.com,sub_ajeno,caixa,marca sub+gancho,1,sintetico_llm,train,caixa.atualizar-cadastro-br.com,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+antel-factura-online.repl.co,plataforma,antel,marca+gancho plataforma,1,sintetico_llm,train,antel-factura-online.repl.co,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+confirmacion-envio-paquete.net,apex,ninguna,gancho sin marca,1,sintetico_llm,train,confirmacion-envio-paquete.net,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+descuentos-exclusivos-vip.shop,apex,ninguna,gancho sin marca,1,sintetico_llm,train,descuentos-exclusivos-vip.shop,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+vkz9tqlm-portal.com,apex,ninguna,gibberish,1,sintetico_llm,train,vkz9tqlm-portal.com,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-pagamento-rapido.com,apex,magalu,marca+gancho,1,sintetico_llm,train,magalu-pagamento-rapido.com,5,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.loja-premiada-br6.com,sub_ajeno,americanas,marca+palabra gancho,1,sintetico_llm,train,americanas.loja-premiada-br6.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+verificar.conta-suspensa-online.com,sub_ajeno,ninguna,gancho+subdominio,1,sintetico_llm,train,verificar.conta-suspensa-online.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadolivre-envios-br.com,apex,mercadolibre,marca+palabra gancho,1,sintetico_llm,train,mercadolivre-envios-br.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-reembolso-rapido.net,apex,americanas,marca+palabra gancho,1,sintetico_llm,train,americanas-reembolso-rapido.net,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+premios-exclusivos-cliente.vip,apex,ninguna,palabras gancho,1,sintetico_llm,train,premios-exclusivos-cliente.vip,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+santander-clave-segura-ar.net,apex,santander,marca+gancho,1,sintetico_llm,train,santander-clave-segura-ar.net,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+prex-saldo-disponible-uy.pages.dev,plataforma,prex,marca+gancho plataforma,1,sintetico_llm,train,prex-saldo-disponible-uy.pages.dev,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+kzrq8-atualize-agora.top,apex,ninguna,gibberish+gancho,1,sintetico_llm,train,kzrq8-atualize-agora.top,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+serasa-limpa-nome-online.net,apex,serasa,marca+gancho,1,sintetico_llm,train,serasa-limpa-nome-online.net,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.acesso-cliente-digital.online,sub_ajeno,itau,marca+subdominio,1,sintetico_llm,train,itau.acesso-cliente-digital.online,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadopago.pagos-verificados-ar.com,sub_ajeno,mercadopago,marca+gancho,1,sintetico_llm,train,mercadopago.pagos-verificados-ar.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+soporte-factura-vencida7.com,apex,ninguna,palabras gancho,1,sintetico_llm,train,soporte-factura-vencida7.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-ofertas-relampago.vercel.app,plataforma,americanas,marca+gancho plataforma,1,sintetico_llm,train,americanas-ofertas-relampago.vercel.app,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.minha-conta-br3.com,sub_ajeno,americanas,marca+subdominio,1,sintetico_llm,train,americanas.minha-conta-br3.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-sorteio-oficial.com,apex,americanas,marca+gancho,1,sintetico_llm,train,americanas-sorteio-oficial.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-cupom-desconto-br.net,apex,magalu,marca+gancho,1,sintetico_llm,train,magalu-cupom-desconto-br.net,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magazineluiza-promo-vip.com,apex,magalu,marca variante+gancho,1,sintetico_llm,train,magazineluiza-promo-vip.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.token-seguro-cliente5.com,sub_ajeno,itau,marca+token,1,sintetico_llm,train,itau.token-seguro-cliente5.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+pt9xkwz-portal-acesso.vercel.app,plataforma,ninguna,gibberish plataforma,1,sintetico_llm,train,pt9xkwz-portal-acesso.vercel.app,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+rastreo-envio-pendiente.net,apex,ninguna,palabras gancho,1,sintetico_llm,train,rastreo-envio-pendiente.net,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu.ofertas-do-dia-br2.com,sub_ajeno,magalu,marca+gancho,1,sintetico_llm,train,magalu.ofertas-do-dia-br2.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+descontos.super-promo-br.black,sub_ajeno,ninguna,gancho+subdominio,1,sintetico_llm,train,descontos.super-promo-br.black,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+suporte.nota-fiscal-pendente9.com.br,sub_ajeno,ninguna,gancho+subdominio,1,sintetico_llm,train,suporte.nota-fiscal-pendente9.com.br,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau-central-seguranca.netlify.app,plataforma,itau,marca+gancho plataforma,1,sintetico_llm,train,itau-central-seguranca.netlify.app,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-black-pay-br.com,apex,americanas,marca+gancho,1,sintetico_llm,train,americanas-black-pay-br.com,6,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+verificacion-pago-cliente.pantheonsite.io,plataforma,ninguna,palabra gancho+plataforma,1,sintetico_llm,train,verificacion-pago-cliente.pantheonsite.io,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bradesco-atualiza-conta.net,apex,bradesco,marca+palabra gancho,1,sintetico_llm,train,bradesco-atualiza-conta.net,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu.ofertas-relampago-loja.com.br,sub_ajeno,magalu,marca subdominio ajeno,1,sintetico_llm,train,magalu.ofertas-relampago-loja.com.br,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.acesso-seguro-cliente.site,sub_ajeno,itau,marca subdominio ajeno,1,sintetico_llm,train,itau.acesso-seguro-cliente.site,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+soporte.cuenta-bloqueada-online.help,sub_ajeno,ninguna,gancho subdominio,1,sintetico_llm,train,soporte.cuenta-bloqueada-online.help,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+rastreo.envio-pendiente-entrega.com,sub_ajeno,ninguna,gancho logistica,1,sintetico_llm,train,rastreo.envio-pendiente-entrega.com,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu.pagamento-pendente-br.com,sub_ajeno,magalu,marca subdominio ajeno,1,sintetico_llm,train,magalu.pagamento-pendente-br.com,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+qz7wkm.portal-acesso-seguro.xyz,sub_ajeno,ninguna,gibberish subdominio,1,sintetico_llm,train,qz7wkm.portal-acesso-seguro.xyz,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+actualizar.datos-personales-cliente.net,sub_ajeno,ninguna,gancho subdominio,1,sintetico_llm,train,actualizar.datos-personales-cliente.net,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+scotiabank-clave-digital.com,apex,scotiabank,marca+palabra gancho,1,sintetico_llm,train,scotiabank-clave-digital.com,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bbva-acceso-clientes-net.com,apex,bbva,marca+palabra gancho,1,sintetico_llm,train,bbva-acceso-clientes-net.com,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadolibre-pagos-verificados.pages.dev,plataforma,mercadolibre,marca+gancho plataforma,1,sintetico_llm,train,mercadolibre-pagos-verificados.pages.dev,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-ofertas-blackweek.com,apex,americanas,marca+promo,1,sintetico_llm,train,americanas-ofertas-blackweek.com,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.minha-conta-premios-br.com,sub_ajeno,americanas,marca subdominio ajeno,1,sintetico_llm,train,americanas.minha-conta-premios-br.com,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+central-atendimento-cliente.repl.co,plataforma,ninguna,gancho plataforma,1,sintetico_llm,train,central-atendimento-cliente.repl.co,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-cupom-vip-br.vercel.app,plataforma,magalu,marca+promo plataforma,1,sintetico_llm,train,magalu-cupom-vip-br.vercel.app,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-promo-relampago.shop,apex,americanas,marca+promo,1,sintetico_llm,train,americanas-promo-relampago.shop,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-sorteio-natal.cc,apex,americanas,marca+promo,1,sintetico_llm,train,americanas-sorteio-natal.cc,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadolibre-envios-ar.com,apex,mercadolibre,marca+palabra gancho,1,sintetico_llm,train,mercadolibre-envios-ar.com,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-loja-oficial2.com,apex,americanas,marca+numero,1,sintetico_llm,train,americanas-loja-oficial2.com,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+login.confirmar-identidad-seguro.app,sub_ajeno,ninguna,gancho subdominio,1,sintetico_llm,train,login.confirmar-identidad-seguro.app,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bancoestado-clave-personas.vercel.app,plataforma,bancoestado,marca+gancho plataforma,1,sintetico_llm,train,bancoestado-clave-personas.vercel.app,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+factura-vencida-pago-online.net,apex,ninguna,palabra gancho,1,sintetico_llm,train,factura-vencida-pago-online.net,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+ingreso-familiar-ayuda.com.ar,apex,ninguna,gancho gobierno,1,sintetico_llm,train,ingreso-familiar-ayuda.com.ar,7,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+reembolso-pendiente-cliente.com,apex,ninguna,palabra gancho+apex,1,sintetico_llm,train,reembolso-pendiente-cliente.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+verificar.pago-seguro-online7.com,sub_ajeno,ninguna,gancho+sub ajeno,1,sintetico_llm,train,verificar.pago-seguro-online7.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+atualizacao-cadastral-br.com.br,apex,ninguna,gancho portugues,1,sintetico_llm,train,atualizacao-cadastral-br.com.br,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu.central-pedidos-br2.com,sub_ajeno,magalu,marca sub ajeno,1,sintetico_llm,train,magalu.central-pedidos-br2.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu.entrega-rastreio-online.net,sub_ajeno,magalu,marca+rastreo,1,sintetico_llm,train,magalu.entrega-rastreio-online.net,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.suporte-cliente-digital.help,sub_ajeno,itau,marca+soporte,1,sintetico_llm,train,itau.suporte-cliente-digital.help,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-ofertas-exclusivas.com,apex,magalu,marca+gancho apex,1,sintetico_llm,train,magalu-ofertas-exclusivas.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+d8nxkqw2.portal-cliente-seguro.com,sub_ajeno,ninguna,gibberish+portal,1,sintetico_llm,train,d8nxkqw2.portal-cliente-seguro.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu.minha-conta-vip-br.com,sub_ajeno,magalu,marca+cuenta,1,sintetico_llm,train,magalu.minha-conta-vip-br.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+consulta-deuda-online5.com,apex,ninguna,gancho apex,1,sintetico_llm,train,consulta-deuda-online5.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu-cashback-rapido.com,apex,magalu,marca+cashback,1,sintetico_llm,train,magalu-cashback-rapido.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau-acesso-digital3.com,apex,itau,marca+acceso,1,sintetico_llm,train,itau-acesso-digital3.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+confirmar-datos-cliente.pages.dev,plataforma,ninguna,gancho plataforma,1,sintetico_llm,train,confirmar-datos-cliente.pages.dev,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+magalu.promocao-relampago-loja.net,sub_ajeno,magalu,marca+promo,1,sintetico_llm,train,magalu.promocao-relampago-loja.net,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.token-atualizar-conta9.com,sub_ajeno,itau,marca+token,1,sintetico_llm,train,itau.token-atualizar-conta9.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+login.restablecer-acceso-seguro.net,sub_ajeno,ninguna,login+gancho,1,sintetico_llm,train,login.restablecer-acceso-seguro.net,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau-cliente-verificacao.github.io,plataforma,itau,marca github,1,sintetico_llm,train,itau-cliente-verificacao.github.io,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+envios-rastreo-paquete.de,apex,ninguna,logistica apex,1,sintetico_llm,train,envios-rastreo-paquete.de,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+gfk7tzwp.cf,apex,ninguna,gibberish apex,1,sintetico_llm,train,gfk7tzwp.cf,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+factura-electronica-pago.com,apex,ninguna,factura gancho,1,sintetico_llm,train,factura-electronica-pago.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+seguro.actualizar-datos-personales.com,sub_ajeno,ninguna,gancho sub ajeno,1,sintetico_llm,train,seguro.actualizar-datos-personales.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+beneficio-ayuda-social.com.ar,apex,ninguna,ayuda social apex,1,sintetico_llm,train,beneficio-ayuda-social.com.ar,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bancoestado-clave-personas2.com,apex,bancoestado,marca+clave apex,1,sintetico_llm,train,bancoestado-clave-personas2.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bancoestado.acceso-seguro-cl.com,sub_ajeno,bancoestado,marca sub ajeno,1,sintetico_llm,train,bancoestado.acceso-seguro-cl.com,8,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+confirmar.pago-pendente-online.net,sub_ajeno,ninguna,gancho+subdominio,1,sintetico_llm,train,confirmar.pago-pendente-online.net,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadolibre-pagos-pendientes.pages.dev,plataforma,mercadolibre,marca+gancho plataforma,1,sintetico_llm,train,mercadolibre-pagos-pendientes.pages.dev,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+caixa-atualiza-cadastro.com,apex,caixa,marca+gancho,1,sintetico_llm,train,caixa-atualiza-cadastro.com,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+serasa.consulta-score-br4.com,sub_ajeno,serasa,marca+subdominio ajeno,1,sintetico_llm,train,serasa.consulta-score-br4.com,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-saldao-vip.cf,apex,americanas,marca+gancho,1,sintetico_llm,train,americanas-saldao-vip.cf,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-ofertas-br.de,apex,americanas,marca+gancho,1,sintetico_llm,train,americanas-ofertas-br.de,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+acceso-seguro-cliente9.web.app,plataforma,ninguna,gancho plataforma,1,sintetico_llm,train,acceso-seguro-cliente9.web.app,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.token-digital-seguro.xyz,sub_ajeno,itau,marca+subdominio ajeno,1,sintetico_llm,train,itau.token-digital-seguro.xyz,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-premios-br.repl.co,plataforma,americanas,marca+gancho plataforma,1,sintetico_llm,train,americanas-premios-br.repl.co,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+reembolso-rapido-online.site,apex,ninguna,gancho reembolso,1,sintetico_llm,train,reembolso-rapido-online.site,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+serasa-limpa-nome.app,apex,serasa,marca+gancho,1,sintetico_llm,train,serasa-limpa-nome.app,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+kx9fztwq-verificar.com,apex,ninguna,gibberish+gancho,1,sintetico_llm,train,kx9fztwq-verificar.com,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+rastreo.paquete-entrega-pendiente.cc,sub_ajeno,ninguna,gancho logistica,1,sintetico_llm,train,rastreo.paquete-entrega-pendiente.cc,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+portal-cliente-actualizar.vercel.app,plataforma,ninguna,gancho plataforma,1,sintetico_llm,train,portal-cliente-actualizar.vercel.app,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+factura-vencida-cobro.site,apex,ninguna,gancho factura,1,sintetico_llm,train,factura-vencida-cobro.site,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+soporte.cuenta-suspendida-aviso.com,sub_ajeno,ninguna,gancho subdominio,1,sintetico_llm,train,soporte.cuenta-suspendida-aviso.com,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+nota-fiscal-pendente-br.com,apex,ninguna,gancho pt,1,sintetico_llm,train,nota-fiscal-pendente-br.com,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas.mega-saldao-loja.ml,sub_ajeno,americanas,marca+subdominio ajeno,1,sintetico_llm,train,americanas.mega-saldao-loja.ml,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+w7tvkqz-seguro.com,apex,ninguna,gibberish+gancho,1,sintetico_llm,train,w7tvkqz-seguro.com,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-cashback-br.com,apex,americanas,marca+gancho,1,sintetico_llm,train,americanas-cashback-br.com,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-ofertas-oficial.blogspot.com,plataforma,americanas,marca+gancho plataforma,1,sintetico_llm,train,americanas-ofertas-oficial.blogspot.com,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bradesco-atualiza-token.vercel.app,plataforma,bradesco,marca+gancho plataforma,1,sintetico_llm,train,bradesco-atualiza-token.vercel.app,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+santander-clave-online.repl.co,plataforma,santander,marca+gancho plataforma,1,sintetico_llm,train,santander-clave-online.repl.co,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+promo-relampago-desconto.cc,apex,ninguna,gancho promo,1,sintetico_llm,train,promo-relampago-desconto.cc,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+atendimento-suporte-cliente.com,apex,ninguna,gancho soporte,1,sintetico_llm,train,atendimento-suporte-cliente.com,9,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+verificacao.conta-suspensa-aviso.com,sub_ajeno,ninguna,gancho+subdominio,1,sintetico_llm,train,verificacao.conta-suspensa-aviso.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau-acesso-token-seguro.de,apex,itau,marca+gancho,1,sintetico_llm,train,itau-acesso-token-seguro.de,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+q9zktrm2.pago-pendiente-cliente.online,sub_ajeno,ninguna,gibberish+gancho,1,sintetico_llm,train,q9zktrm2.pago-pendiente-cliente.online,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bbva.clave-acceso-personas.net,sub_ajeno,bbva,marca+subdominio,1,sintetico_llm,train,bbva.clave-acceso-personas.net,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itaucard-fatura-digital.tk,apex,itau,marca+gancho,1,sintetico_llm,train,itaucard-fatura-digital.tk,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+americanas-saldao-ofertas-br.blogspot.com,plataforma,americanas,marca+gancho hosting,1,sintetico_llm,train,americanas-saldao-ofertas-br.blogspot.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+actualizar-datos-urgente7.com,apex,ninguna,gancho+numero,1,sintetico_llm,train,actualizar-datos-urgente7.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+login.restablecer-clave-online.com,sub_ajeno,ninguna,gancho+subdominio,1,sintetico_llm,train,login.restablecer-clave-online.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+sucive-pago-patente-online.com,apex,sucive,marca+gancho,1,sintetico_llm,train,sucive-pago-patente-online.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+h7knqpwz.soporte-cuenta-aviso.com,sub_ajeno,ninguna,gibberish+gancho,1,sintetico_llm,train,h7knqpwz.soporte-cuenta-aviso.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+antel-factura-vencida-pago.repl.co,plataforma,antel,marca+gancho hosting,1,sintetico_llm,train,antel-factura-vencida-pago.repl.co,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+mercadolibre-envios-rastreo.com,apex,mercadolibre,marca+gancho,1,sintetico_llm,train,mercadolibre-envios-rastreo.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+reembolso-pendente-cliente2.com,apex,ninguna,gancho+numero,1,sintetico_llm,train,reembolso-pendente-cliente2.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+bradesco-atualiza-cadastro.com,apex,bradesco,marca+gancho,1,sintetico_llm,train,bradesco-atualiza-cadastro.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+serasa.consulta-cpf-limpa-nome.com,sub_ajeno,serasa,marca+subdominio,1,sintetico_llm,train,serasa.consulta-cpf-limpa-nome.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau.central-atendimento-digital.com,sub_ajeno,itau,marca+subdominio,1,sintetico_llm,train,itau.central-atendimento-digital.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+consulta-deuda-vencida-online.com,apex,ninguna,gancho,1,sintetico_llm,train,consulta-deuda-vencida-online.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+nota-fiscal.atualizar-pedido-br.com.br,sub_ajeno,ninguna,gancho+subdominio,1,sintetico_llm,train,nota-fiscal.atualizar-pedido-br.com.br,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+beneficio-social-ayuda5.com,apex,ninguna,gancho+numero,1,sintetico_llm,train,beneficio-social-ayuda5.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+portal-cliente-verificar.netlify.app,plataforma,ninguna,gancho hosting,1,sintetico_llm,train,portal-cliente-verificar.netlify.app,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+itau-token-atualizar-conta.com,apex,itau,marca+gancho,1,sintetico_llm,train,itau-token-atualizar-conta.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+m3xpkqtz.envio-paquete-retenido.com,sub_ajeno,ninguna,gibberish+gancho,1,sintetico_llm,train,m3xpkqtz.envio-paquete-retenido.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+seguro.confirmar-identidad-cliente.com,sub_ajeno,ninguna,gancho+subdominio,1,sintetico_llm,train,seguro.confirmar-identidad-cliente.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+promocao-cupom-desconto-vip.blogspot.com,plataforma,ninguna,gancho hosting,1,sintetico_llm,train,promocao-cupom-desconto-vip.blogspot.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e
+facebook.recuperar-cuenta-seguridad.com,sub_ajeno,facebook,marca+subdominio,1,sintetico_llm,train,facebook.recuperar-cuenta-seguridad.com,10,claude-opus-5-5,claude-opus-4-8,medium,188b79ac6771e38e

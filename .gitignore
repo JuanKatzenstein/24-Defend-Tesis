@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# estado de corridas del generador (Fase 1/2)
+tools/historial_lotes.json

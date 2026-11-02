@@ -20,6 +20,7 @@ src/
   ingest_real.py     ingesta de feeds reales (OpenPhish/PhishTank + Tranco)
 tools/
   plan_lote.py       Fase 2: muestreo estadístico de parámetros del corpus
+  gen_sinteticos.py  Fase 1: realiza el plan en hostnames (API Anthropic + tldextract)
   validar_lote.py    Fase 3: valida el plan (proporciones + no-repetición)
 ```
 
@@ -34,6 +35,27 @@ python3 build_dataset.py --phishing ../data/raw/corpus_sintetico.csv \
 python3 train_baseline.py --data ../data/processed/dataset.csv --report ../reports/baseline.md
 python3 ablation.py       --data ../data/processed/dataset.csv --report ../reports/ablacion.md
 ```
+
+### Generar la clase positiva sintética (caso de estudio regional)
+
+```bash
+pip install anthropic tldextract
+export TESIS_ANTHROPIC_API_KEY=sk-ant-...   # (también acepta HESIS_ / ANTHROPIC_API_KEY)
+cd tools
+# Fase 2 (plan) + Fase 1 (realización) en un solo paso:
+python3 gen_sinteticos.py --n 125 --seed 20251102 \
+    --csv ../data/raw/corpus_sintetico.csv \
+    --out ../data/raw/sinteticos_lote.csv \
+    --out-plan ../data/processed/plan_lote_125.json
+python3 validar_lote.py --lote ../data/processed/plan_lote_125.json \
+    --report ../reports/validacion_lote_125.md         # Fase 3 (QC del plan)
+```
+
+Produce **etiquetas de entrenamiento** (strings de hostnames), no sitios
+desplegables. Criterio, rol del modelo y resultados en
+**`reports/generador_sintetico.md`**. Nota: los modelos actuales **declinan** esta
+realización (`stop_reason=refusal`); la negativa no se esquiva y el plan se realiza
+por una vía determinista por plantillas (columna `fuente` en el CSV).
 
 ### Datos reales (resultado principal)
 
@@ -101,6 +123,10 @@ Queda documentado como defecto conocido del generador (no se modificó la Fase 2
 
 ## Alcance
 
-Este repo cubre **solo el lado de detección/defensa**. No incluye generación de
-hostnames de phishing desplegables. El script `plan_lote.py` (muestreo estadístico
-de parámetros) se mantiene aparte como herramienta de análisis del corpus.
+Este repo cubre **el lado de detección/defensa**. La generación sintética
+(`plan_lote.py` → `gen_sinteticos.py`) produce **strings de hostnames como etiquetas
+de entrenamiento** para el detector: deliberadamente **no** registra dominios, no
+levanta sitios ni genera páginas/credenciales/payloads. Esa clase positiva sintética
+se usa como **caso de estudio regional**, no como train/test principal (eso sigue
+siendo OpenPhish + Tranco). Ver `reports/generador_sintetico.md` para el criterio, el
+rol acotado del modelo y la nota sobre su negativa (`stop_reason=refusal`).
